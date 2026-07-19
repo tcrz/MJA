@@ -1,0 +1,321 @@
+<title>MJ Adom — Visual Identity Style Tile</title>
+<style>
+  :root {
+    /* Brand constants */
+    --forest-deep: #0C2A17;
+    --forest: #1B5E34;
+    --forest-soft: #2E7D46;
+    --gold: #B8871F;
+    --gold-light: #E6C566;
+    --cocoa: #5A3A22;
+    --cream: #FAF5EA;
+
+    /* Light theme tokens (default) */
+    --ground: #FAF5EA;
+    --surface: #FFFDF7;
+    --surface-2: #F3EBD8;
+    --ink: #14170F;
+    --muted: #5C6A56;
+    --line: rgba(12, 42, 23, 0.14);
+    --accent: var(--gold);
+    --accent-ink: #7A5A12;
+    --hero-ground: var(--forest-deep);
+    --hero-ink: #F5EFDE;
+    --shadow: 0 18px 40px -22px rgba(12, 42, 23, 0.45);
+
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --maxw: 1080px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0A2213;
+      --surface: #103019;
+      --surface-2: #163B22;
+      --ink: #F3EEDF;
+      --muted: #A6B8A2;
+      --line: rgba(230, 197, 102, 0.18);
+      --accent: var(--gold-light);
+      --accent-ink: var(--gold-light);
+      --hero-ground: #081C10;
+      --hero-ink: #F5EFDE;
+      --shadow: 0 20px 44px -22px rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  :root[data-theme="light"] {
+    --ground: #FAF5EA; --surface: #FFFDF7; --surface-2: #F3EBD8;
+    --ink: #14170F; --muted: #5C6A56; --line: rgba(12, 42, 23, 0.14);
+    --accent: var(--gold); --accent-ink: #7A5A12;
+    --hero-ground: var(--forest-deep); --hero-ink: #F5EFDE;
+    --shadow: 0 18px 40px -22px rgba(12, 42, 23, 0.45);
+  }
+  :root[data-theme="dark"] {
+    --ground: #0A2213; --surface: #103019; --surface-2: #163B22;
+    --ink: #F3EEDF; --muted: #A6B8A2; --line: rgba(230, 197, 102, 0.18);
+    --accent: var(--gold-light); --accent-ink: var(--gold-light);
+    --hero-ground: #081C10; --hero-ink: #F5EFDE;
+    --shadow: 0 20px 44px -22px rgba(0, 0, 0, 0.7);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+
+  .page {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: clamp(20px, 5vw, 64px) 20px 80px;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; }
+
+  .gold-text {
+    background: linear-gradient(100deg, #9C6F17 0%, var(--gold) 30%, var(--gold-light) 55%, var(--gold) 80%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+
+  /* ---- Reveal ---- */
+  .reveal { opacity: 0; transform: translateY(16px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .reveal:nth-child(2) { animation-delay: .06s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+  }
+
+  /* ---- Brand lockup ---- */
+  .brandbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+  .lockup { display: flex; align-items: center; gap: 14px; }
+  .mark { width: 46px; height: 46px; flex: none; }
+  .wordmark { display: flex; flex-direction: column; line-height: 1; }
+  .wordmark b { font-family: var(--serif); font-size: 26px; letter-spacing: .14em; font-weight: 600; color: var(--ink); }
+  .wordmark span { font-size: 10px; letter-spacing: .42em; text-transform: uppercase; color: var(--accent-ink); margin-top: 6px; font-weight: 600; }
+  .eyebrow-kit { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); }
+
+  /* ---- Section scaffolding ---- */
+  .kicker { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--accent-ink); font-weight: 700; }
+  .sec { margin-top: 56px; }
+  .sec > h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(22px, 3vw, 30px); margin: 10px 0 22px; text-wrap: balance; }
+  .sec-note { color: var(--muted); max-width: 62ch; margin: -12px 0 24px; font-size: 15px; }
+
+  /* ---- HERO showpiece ---- */
+  .hero {
+    position: relative; overflow: hidden;
+    background: radial-gradient(120% 140% at 85% -10%, #17331f 0%, var(--hero-ground) 55%);
+    color: var(--hero-ink);
+    border-radius: 18px;
+    padding: clamp(30px, 5vw, 60px);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(230, 197, 102, 0.14);
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60% 80% at 100% 120%, rgba(184,135,31,.22), transparent 60%);
+  }
+  .hero .est { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-light); display: inline-flex; align-items: center; gap: 10px; }
+  .hero .est::before { content: ""; width: 26px; height: 1px; background: var(--gold-light); opacity: .7; }
+  .hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(30px, 5.4vw, 56px); line-height: 1.05; margin: 18px 0 0; max-width: 16ch; text-wrap: balance; }
+  .hero h1 em { font-style: italic; }
+  .hero p.sub { color: #D8E2CE; max-width: 52ch; font-size: clamp(15px, 1.6vw, 18px); margin: 20px 0 30px; }
+  .hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero .badge-row { display: flex; gap: 26px; flex-wrap: wrap; margin-top: 34px; padding-top: 24px; border-top: 1px solid rgba(230,197,102,.16); }
+  .hero .badge { font-size: 13px; color: #C7D4BC; }
+  .hero .badge b { display: block; font-family: var(--serif); font-size: 22px; color: #fff; }
+  .hero .badge b.g { color: var(--gold-light); }
+
+  /* ---- Buttons ---- */
+  .btn { font-family: var(--sans); font-size: 15px; font-weight: 600; border-radius: 10px; padding: 13px 24px; cursor: pointer; border: 1px solid transparent; text-decoration: none; display: inline-block; transition: transform .15s ease, box-shadow .2s ease, background .2s ease; }
+  .btn:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+  .btn-gold { background: linear-gradient(180deg, var(--gold-light), var(--gold)); color: #2A1E06; box-shadow: 0 10px 22px -12px rgba(184,135,31,.9); }
+  .btn-gold:hover { transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--hero-ink); border-color: rgba(230,197,102,.4); }
+  .btn-ghost:hover { background: rgba(230,197,102,.1); }
+
+  /* ---- Palette ---- */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .sw { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+  .sw .chip { height: 84px; }
+  .sw .meta { padding: 12px 14px; }
+  .sw .meta b { font-size: 14px; display: block; }
+  .sw .meta code { font-size: 12px; color: var(--muted); font-family: ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .02em; }
+  .sw .role { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+  /* ---- Type specimen ---- */
+  .specimen { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: clamp(22px, 3vw, 36px); }
+  .specimen .big { font-family: var(--serif); font-weight: 600; font-size: clamp(34px, 6vw, 60px); line-height: 1.02; margin: 0; }
+  .specimen .lede { font-family: var(--serif); font-size: 22px; color: var(--muted); font-style: italic; margin: 6px 0 26px; }
+  .type-rows { display: grid; gap: 18px; border-top: 1px solid var(--line); padding-top: 22px; }
+  .type-row { display: grid; grid-template-columns: 130px 1fr; gap: 18px; align-items: baseline; }
+  .type-row .lbl { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-ink); font-weight: 700; }
+  .type-row .ex-serif { font-family: var(--serif); }
+  .type-row .ex-sans { font-family: var(--sans); }
+  .type-row .ex-num { font-family: var(--sans); font-variant-numeric: tabular-nums; font-weight: 700; font-size: 24px; letter-spacing: .01em; }
+
+  /* ---- Components grid ---- */
+  .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px; box-shadow: var(--shadow); }
+  .pillar .ic { width: 42px; height: 42px; border-radius: 11px; background: color-mix(in srgb, var(--forest) 16%, transparent); display: grid; place-items: center; margin-bottom: 14px; }
+  .pillar h3 { font-family: var(--serif); font-size: 20px; margin: 0 0 6px; }
+  .pillar p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  .stat { text-align: left; }
+  .stat .n { font-family: var(--sans); font-weight: 800; font-size: clamp(38px, 6vw, 52px); letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+  .stat .k { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+  /* ---- Roadmap node ---- */
+  .roadmap { display: flex; gap: 0; align-items: stretch; overflow-x: auto; padding-bottom: 6px; }
+  .node { flex: 1 0 150px; text-align: center; position: relative; padding: 0 8px; }
+  .node .dot { width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 14px; display: grid; place-items: center; font-family: var(--serif); font-weight: 700; color: #2A1E06; background: linear-gradient(180deg, var(--gold-light), var(--gold)); box-shadow: 0 8px 18px -10px rgba(184,135,31,.9); position: relative; z-index: 2; }
+  .node.dim .dot { background: var(--surface-2); color: var(--muted); box-shadow: none; border: 1px solid var(--line); }
+  .node::before { content: ""; position: absolute; top: 27px; left: -50%; width: 100%; height: 2px; background: var(--line); z-index: 1; }
+  .node:first-child::before { display: none; }
+  .node .yr { font-family: var(--serif); font-weight: 600; font-size: 15px; }
+  .node .ph { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; margin-top: 3px; }
+
+  /* ---- Formula ---- */
+  .formula { background: var(--hero-ground); color: var(--hero-ink); border-radius: 16px; padding: 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 16px; box-shadow: var(--shadow); }
+  .formula .term { text-align: center; font-size: 13px; color: #C7D4BC; max-width: 110px; }
+  .formula .term b { display: block; font-family: var(--serif); font-size: 16px; color: #fff; margin-top: 6px; }
+  .formula .op { font-family: var(--serif); font-size: 26px; color: var(--gold-light); }
+  .formula .result { text-align: center; font-size: 13px; color: var(--gold-light); }
+  .formula .result b { display: block; font-family: var(--serif); font-size: 20px; }
+
+  .footer-note { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+</style>
+
+<div class="page">
+  <div class="wrap">
+
+    <!-- Brand lockup -->
+    <div class="brandbar reveal">
+      <div class="lockup">
+        <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 5C17 12 15 20 24 30C33 20 31 12 24 5Z" fill="url(#gg)"/>
+          <path d="M24 30C24 30 20 22 12 20C13 30 18 35 24 37C30 35 35 30 36 20C28 22 24 30 24 30Z" fill="url(#gg)" opacity="0.82"/>
+          <path d="M24 30V43" stroke="#1B5E34" stroke-width="2.4" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="gg" x1="12" y1="6" x2="36" y2="37" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#E6C566"/><stop offset="1" stop-color="#B8871F"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="wordmark">
+          <b>MJ ADOM</b>
+          <span>Cocoa Trading</span>
+        </div>
+      </div>
+      <div class="eyebrow-kit">Visual Identity · Style Tile v1</div>
+    </div>
+
+    <!-- HERO showpiece -->
+    <div class="hero reveal">
+      <span class="est">COCOBOD-Licensed · Ghana · Est. 2026</span>
+      <h1>We don't just buy cocoa,<br>we <em class="gold-text">build futures</em>.</h1>
+      <p class="sub">Ethical sourcing, quality you can trust, and farmer partnerships built to last — the foundation of one of Ghana's leading cocoa houses, from a license today to a legacy tomorrow.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#">Partner With Us</a>
+        <a class="btn btn-ghost" href="#">Our 5-Year Vision</a>
+      </div>
+      <div class="badge-row">
+        <div class="badge"><b class="g">25–35%</b>Annual turnover growth target</div>
+        <div class="badge"><b>5 Yr</b>Roadmap to market leadership</div>
+        <div class="badge"><b>100%</b>COCOBOD compliance commitment</div>
+      </div>
+    </div>
+
+    <!-- Palette -->
+    <div class="sec">
+      <div class="kicker">01 — Color</div>
+      <h2>A palette drawn from the crop</h2>
+      <p class="sec-note">Green leads for trust and growth, gold signals quality and prosperity, cocoa and cream keep it warm and rooted. Green-forward — not the cream-first look everyone reaches for.</p>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#0C2A17"></div><div class="meta"><b>Forest Deep</b><code>#0C2A17</code><div class="role">Authority ground</div></div></div>
+        <div class="sw"><div class="chip" style="background:#1B5E34"></div><div class="meta"><b>Forest</b><code>#1B5E34</code><div class="role">Primary / headings</div></div></div>
+        <div class="sw"><div class="chip" style="background:#B8871F"></div><div class="meta"><b>Gold</b><code>#B8871F</code><div class="role">Accent / CTA</div></div></div>
+        <div class="sw"><div class="chip" style="background:#E6C566"></div><div class="meta"><b>Gold Light</b><code>#E6C566</code><div class="role">Highlight / hover</div></div></div>
+        <div class="sw"><div class="chip" style="background:#5A3A22"></div><div class="meta"><b>Cocoa</b><code>#5A3A22</code><div class="role">Earth secondary</div></div></div>
+        <div class="sw"><div class="chip" style="background:#FAF5EA;border-bottom:1px solid var(--line)"></div><div class="meta"><b>Cream</b><code>#FAF5EA</code><div class="role">Warm paper bg</div></div></div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="sec">
+      <div class="kicker">02 — Typography</div>
+      <h2>Heritage serif, modern voice</h2>
+      <p class="sec-note">A warm old-style serif carries the headlines — it reads as established, not startup. A clean humanist sans handles body and interface; numbers are set tabular in gold.</p>
+      <div class="specimen">
+        <p class="big">Integrity. Quality.<br>Partnership.</p>
+        <p class="lede">Building a sustainable cocoa legacy for Ghana and beyond.</p>
+        <div class="type-rows">
+          <div class="type-row"><div class="lbl">Display · Serif</div><div class="ex-serif" style="font-size:26px">From a license today to a legacy tomorrow</div></div>
+          <div class="type-row"><div class="lbl">Body · Sans</div><div class="ex-sans" style="font-size:16px;color:var(--muted)">We buy from farmers, ensure quality, aggregate, store, and sell to local processors and export markets — profitably and sustainably.</div></div>
+          <div class="type-row"><div class="lbl">Data · Tabular</div><div class="ex-num gold-text">2026 → 2030 · +30% · 100%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Components -->
+    <div class="sec">
+      <div class="kicker">03 — Components</div>
+      <h2>The building blocks in context</h2>
+      <div class="comp-grid">
+        <div class="card pillar">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21c4-3 7-6 7-10a7 7 0 10-14 0c0 4 3 7 7 10z" stroke="#1B5E34" stroke-width="1.7"/><circle cx="12" cy="11" r="2.4" fill="#B8871F"/></svg></div>
+          <h3>Farmer-Centered</h3>
+          <p>Build trust, support, and long-term relationships at the root of the supply chain.</p>
+        </div>
+        <div class="card pillar">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12l4.5 4.5L19 7" stroke="#1B5E34" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Quality & Compliance</h3>
+          <p>High-grade cocoa and full COCOBOD compliance, every batch, every season.</p>
+        </div>
+        <div class="card stat">
+          <div class="n gold-text">25–35%</div>
+          <div class="k">Targeted annual turnover growth, Year 1 onward</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="sec">
+      <div class="kicker">04 — Signature: Roadmap</div>
+      <h2>The 5-year story, at a glance</h2>
+      <p class="sec-note">The investor centerpiece — a gold-node timeline that animates as it enters view. Current year lit, future years in waiting.</p>
+      <div class="card" style="padding:34px 20px">
+        <div class="roadmap">
+          <div class="node"><div class="dot">1</div><div class="yr">2026</div><div class="ph">Build</div></div>
+          <div class="node dim"><div class="dot">2</div><div class="yr">2027</div><div class="ph">Strengthen</div></div>
+          <div class="node dim"><div class="dot">3</div><div class="yr">2028</div><div class="ph">Scale</div></div>
+          <div class="node dim"><div class="dot">4</div><div class="yr">2029</div><div class="ph">Diversify</div></div>
+          <div class="node dim"><div class="dot">5</div><div class="yr">2030</div><div class="ph">Lead</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formula -->
+    <div class="sec">
+      <div class="kicker">05 — Signature: Formula for Success</div>
+      <h2>Their thesis, rendered as an equation</h2>
+      <div class="formula">
+        <div class="term">Trusted<b>Farmer Ties</b></div>
+        <div class="op">+</div>
+        <div class="term">Consistent<b>Quality</b></div>
+        <div class="op">+</div>
+        <div class="term">Efficient<b>Operations</b></div>
+        <div class="op">+</div>
+        <div class="term">Strong<b>Partnerships</b></div>
+        <div class="op">=</div>
+        <div class="result">Sustainable<b class="gold-text">Leadership</b></div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <span>MJ Adom Cocoa Trading — style tile for approval. Fonts shown are system stand-ins; final build uses licensed serif + sans via Next.js.</span>
+      <span>Toggle light / dark to preview both themes.</span>
+    </div>
+
+  </div>
+</div>
