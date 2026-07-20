@@ -37,12 +37,6 @@ export default function Hero() {
       />
 
       <div className="container-x relative flex min-h-[92vh] flex-col justify-center pt-28 pb-20">
-        <Reveal>
-          <p className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-light">
-            <span className="h-px w-7 bg-gold-light/70" />
-            COCOBOD-Licensed · Ghana · Est. 2026
-          </p>
-        </Reveal>
 
         <Reveal delay={80}>
           <h1 className="mt-6 max-w-[16ch] text-[clamp(2.6rem,7vw,5.3rem)] leading-[1.02] tracking-[-0.02em]">
