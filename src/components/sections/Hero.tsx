@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "../Reveal";
 import { financials } from "@/lib/content";
 
@@ -9,16 +10,31 @@ export default function Hero() {
       id="top"
       className="relative overflow-hidden bg-forest-deep text-cream"
     >
-      {/* Ambient light + gold glow */}
+      <Image
+        src="https://images.unsplash.com/photo-1663904459101-78345f6b8300?auto=format&fit=crop&w=2400&q=75"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        // Unsplash's CDN already handles format + sizing (auto=format&w=).
+        // Skip Next's image optimizer, which 500s on these remote sources.
+        unoptimized
+        className="object-cover"
+      />
+      {/* Moody scrim: dark enough to hold text contrast over the photo's
+          brightest areas, light enough to actually let the photo read.
+          Verified against the brightest-pixel worst case at AA. */}
+      <div aria-hidden="true" className="absolute inset-0 bg-forest-deep/70" />
+      {/* Gold glow accent, layered above the scrim. Genuinely
+          transparent outside its radius — must not paint over the photo. */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 130% at 82% -10%, #17331f 0%, #0c2a17 52%), radial-gradient(50% 60% at 100% 108%, rgba(184,135,31,0.22), transparent 60%)",
+            "radial-gradient(50% 60% at 100% 108%, rgba(184,135,31,0.22), transparent 60%)",
         }}
       />
-      <PodMotif />
 
       <div className="container-x relative flex min-h-[92vh] flex-col justify-center pt-28 pb-20">
         <Reveal>
@@ -66,7 +82,7 @@ export default function Hero() {
                 <span className="block font-display text-[clamp(3.4rem,7.5vw,5.2rem)] font-semibold leading-[0.95] text-cream tnum">
                   {primaryStat.value}
                 </span>
-                <span className="mt-2 block max-w-[24ch] text-sm text-cream/65">
+                <span className="mt-2 block max-w-[24ch] text-sm text-cream/85">
                   {primaryStat.label}
                 </span>
               </dd>
@@ -80,7 +96,7 @@ export default function Hero() {
                     <span className="block font-display text-xl font-semibold text-cream/85 tnum">
                       {stat.value}
                     </span>
-                    <span className="mt-1 block max-w-[16ch] text-xs text-cream/50">
+                    <span className="mt-1 block max-w-[16ch] text-xs text-cream/85">
                       {stat.label}
                     </span>
                   </dd>
@@ -91,29 +107,5 @@ export default function Hero() {
         </Reveal>
       </div>
     </section>
-  );
-}
-
-/** Faint cocoa-pod line motif, lower-right — subject-specific texture. */
-function PodMotif() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 200 260"
-      className="pointer-events-none absolute -right-6 bottom-0 hidden h-[85%] w-auto opacity-[0.12] lg:block"
-      fill="none"
-    >
-      <path
-        d="M100 12c34 22 52 66 52 116 0 62-30 116-52 116S48 190 48 128C48 78 66 34 100 12Z"
-        stroke="#E6C566"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M100 20v220M74 40c-6 60-6 140 0 196M126 40c6 60 6 140 0 196M60 70c-4 44-4 96 0 130M140 70c4 44 4 96 0 130"
-        stroke="#E6C566"
-        strokeWidth="1"
-        strokeOpacity="0.7"
-      />
-    </svg>
   );
 }

@@ -68,3 +68,11 @@ No P0 or new P1 issues introduced by the bolder pass — verified via `tsc --noE
 
 - Now that the page states its truest claim first (the license), does the rest of the copy hold to the same standard, or are there other places ambition still outruns what's proven?
 - If a financier's next question after reading this page is "can I see it," is imagery the actual next investment, or is a verified document/photo of the license itself the higher-leverage single asset to add first?
+
+## Amendment (post-critique)
+
+The client shared `reference/business-strategy.jpeg` — the source MJ Adom Business Strategy 2026–2030 infographic that guided this build. It establishes green + gold + cream, the leaf/pod mark, the "We don't just buy cocoa, we build futures" line, the 5-year numbered roadmap, and the "Formula for Success" equation as **pre-existing client brand identity**, not choices made during this build.
+
+This **retracts the P2 "palette is category-obvious" finding**. Per the skill's own identity-preservation rule, an already-committed brand identity wins over the reflex-reject heuristic — this was the correct call, not an unexamined default. It also confirms the Roadmap's numbering and the Invest "Formula" section are faithful translations of real client content, not AI-scaffold reflexes — both were already defensible under the "real sequence, order carries information" exception, and this document confirms they are.
+
+The source infographic also contains real photography (cocoa pods, hands with a seedling, a burlap sack, a warehouse interior) — a lead for closing the still-open P1 imagery gap with authentic, on-brand assets rather than generic stock, if the client has access to the originals or similar.

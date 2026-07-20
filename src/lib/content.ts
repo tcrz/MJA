@@ -18,7 +18,6 @@ export const brand = {
 
 export const nav = [
   { label: "About", href: "#about" },
-  { label: "Vision", href: "#vision" },
   { label: "Model", href: "#model" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Impact", href: "#impact" },
@@ -31,12 +30,6 @@ export const about = {
     "MJ Adom Cocoa Trading has been granted a One-Year Temporary Licensed Buying Certificate to purchase cocoa in Ghana — the first step of a deliberate, long-term plan.",
     "Our strategy is to build a strong foundation, operate with integrity, empower farmers, ensure quality, and scale sustainably to become a major player in the cocoa value chain within five years.",
   ],
-  status: [
-    { label: "Company", value: "MJ Adom Cocoa Trading" },
-    { label: "License", value: "One-Year Temporary Licensed Buyer" },
-    { label: "Business", value: "Cocoa Buying & Export" },
-    { label: "Location", value: "Ghana" },
-  ],
 };
 
 export const vision = {
@@ -44,14 +37,6 @@ export const vision = {
     "To be a leading, trusted and sustainable cocoa trading company in Ghana and beyond.",
   mission:
     "To source, trade and deliver high-quality cocoa while creating value for farmers, customers, employees and shareholders.",
-  values: [
-    "Integrity & Transparency",
-    "Quality Excellence",
-    "Respect for People",
-    "Innovation",
-    "Teamwork",
-    "Sustainability",
-  ],
 };
 
 export const model = {

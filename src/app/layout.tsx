@@ -43,8 +43,6 @@ export const metadata: Metadata = {
   },
 };
 
-const NO_FLASH_THEME = `(function(){try{var t=localStorage.getItem('mjadom-theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,11 +52,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${fraunces.variable} ${hanken.variable} antialiased`}
-      suppressHydrationWarning
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: NO_FLASH_THEME }} />
-      </head>
       <body>{children}</body>
     </html>
   );

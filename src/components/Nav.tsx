@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import ThemeToggle from "./ThemeToggle";
 import { nav } from "@/lib/content";
 
 export default function Nav() {
@@ -51,7 +50,6 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <ThemeToggle light={!solid} />
           <a href="#contact" className="btn btn-forest hidden sm:inline-flex">
             Partner With Us
           </a>

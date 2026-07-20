@@ -35,7 +35,7 @@
   --color-accent-ink: var(--accent-ink);
 }
 
-/* ---- Light theme (default) ---- */
+/* Single default theme — no dark mode, no toggle. */
 :root {
   --ground: #faf5ea;
   --surface: #fffdf7;
@@ -47,47 +47,6 @@
   --accent-ink: #7a5a12;
   --shadow-sm: 0 10px 24px -18px rgba(12, 42, 23, 0.4);
   --shadow-md: 0 18px 40px -22px rgba(12, 42, 23, 0.42);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ground: #0a2213;
-    --surface: #103019;
-    --surface-2: #163b22;
-    --ink: #f3eedf;
-    --muted: #a6b8a2;
-    --line: rgba(230, 197, 102, 0.18);
-    --accent: #e6c566;
-    --accent-ink: #e6c566;
-    --shadow-sm: 0 12px 26px -18px rgba(0, 0, 0, 0.6);
-    --shadow-md: 0 20px 44px -22px rgba(0, 0, 0, 0.7);
-  }
-}
-
-/* Explicit toggle overrides the OS preference in both directions */
-:root[data-theme="light"] {
-  --ground: #faf5ea;
-  --surface: #fffdf7;
-  --surface-2: #f3ebd8;
-  --ink: #14170f;
-  --muted: #5c6a56;
-  --line: rgba(12, 42, 23, 0.14);
-  --accent: #b8871f;
-  --accent-ink: #7a5a12;
-  --shadow-sm: 0 10px 24px -18px rgba(12, 42, 23, 0.4);
-  --shadow-md: 0 18px 40px -22px rgba(12, 42, 23, 0.42);
-}
-:root[data-theme="dark"] {
-  --ground: #0a2213;
-  --surface: #103019;
-  --surface-2: #163b22;
-  --ink: #f3eedf;
-  --muted: #a6b8a2;
-  --line: rgba(230, 197, 102, 0.18);
-  --accent: #e6c566;
-  --accent-ink: #e6c566;
-  --shadow-sm: 0 12px 26px -18px rgba(0, 0, 0, 0.6);
-  --shadow-md: 0 20px 44px -22px rgba(0, 0, 0, 0.7);
 }
 
 @layer base {

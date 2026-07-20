@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
 import { pillars } from "@/lib/content";
@@ -21,16 +22,30 @@ export default function Pillars() {
             each carries the same load. */}
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch lg:gap-8">
           <Reveal>
-            <div className="flex h-full flex-col justify-center rounded-[var(--radius-brand)] border border-line bg-surface p-8 shadow-[var(--shadow-md)] lg:p-11">
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-forest/10 text-forest">
-                <LeadIcon />
-              </span>
-              <h3 className="mt-7 max-w-[16ch] font-display text-[clamp(1.6rem,3vw,2.1rem)] font-semibold leading-tight text-ink">
-                {lead.title}
-              </h3>
-              <p className="mt-4 max-w-[38ch] text-base leading-relaxed text-muted">
-                {lead.desc}
-              </p>
+            <div className="flex h-full flex-col overflow-hidden rounded-[var(--radius-brand)] border border-line bg-surface shadow-[var(--shadow-md)]">
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  src="https://images.unsplash.com/photo-1722699350336-b22f6a263499?auto=format&fit=crop&w=1200&q=75"
+                  alt="A farmer's hand reaching up to harvest a cocoa pod straight from the branch"
+                  fill
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  // Bypasses Next's image optimizer, which 500s unpredictably
+                  // per requested width on this remote source (see Hero).
+                  unoptimized
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 flex-col justify-center p-7 md:p-9">
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-forest/10 text-forest">
+                  <LeadIcon />
+                </span>
+                <h3 className="mt-6 max-w-[18ch] font-display text-[clamp(1.5rem,2.6vw,1.9rem)] font-semibold leading-tight text-ink">
+                  {lead.title}
+                </h3>
+                <p className="mt-3 max-w-[40ch] text-base leading-relaxed text-muted">
+                  {lead.desc}
+                </p>
+              </div>
             </div>
           </Reveal>
 

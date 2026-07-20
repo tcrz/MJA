@@ -44,23 +44,23 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-forest-deep py-24 text-cream md:py-32"
+      className="relative overflow-hidden bg-ground py-24 text-ink md:py-32"
     >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 60% at 20% 0%, rgba(46,125,70,0.4), transparent 60%)",
+            "radial-gradient(60% 60% at 20% 0%, rgba(27,94,52,0.08), transparent 60%)",
         }}
       />
       <div className="container-x relative grid gap-14 lg:grid-cols-[1fr_1fr] lg:items-center">
         <Reveal>
-          <h2 className="text-[clamp(2rem,4.4vw,3rem)] text-cream">
+          <h2 className="text-[clamp(2rem,4.4vw,3rem)] text-ink">
             Let&rsquo;s build a legacy of{" "}
-            <span className="gold-text">excellence</span> together
+            <span className="text-accent-ink">excellence</span> together
           </h2>
-          <p className="mt-5 max-w-[46ch] text-lg text-cream/75">
+          <p className="mt-5 max-w-[46ch] text-lg text-muted">
             Whether you&rsquo;re an investor, a buyer, an exporter, or a farmer —
             we&rsquo;d love to hear from you. Reach out and let&rsquo;s grow
             together.
@@ -68,39 +68,39 @@ export default function Contact() {
           <dl className="mt-8 space-y-4 text-sm">
             <div className="flex items-center gap-3">
               <ContactIcon type="mail" />
-              <a href={`mailto:${brand.email}`} className="text-cream/85 hover:text-gold-light">
+              <a href={`mailto:${brand.email}`} className="text-ink hover:text-accent-ink">
                 {brand.email}
               </a>
             </div>
             <div className="flex items-center gap-3">
               <ContactIcon type="phone" />
-              <span className="text-cream/85">{brand.phone}</span>
+              <span className="text-ink">{brand.phone}</span>
             </div>
             <div className="flex items-center gap-3">
               <ContactIcon type="pin" />
-              <span className="text-cream/85">{brand.location}</span>
+              <span className="text-ink">{brand.location}</span>
             </div>
           </dl>
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="rounded-[var(--radius-brand)] border border-gold-light/15 bg-white/[0.04] p-7 md:p-9">
+          <div className="rounded-[var(--radius-brand)] border border-line bg-surface p-7 shadow-[var(--shadow-md)] md:p-9">
             {submitted ? (
               <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
-                <span className="grid h-14 w-14 place-items-center rounded-full bg-gold-light/20 text-gold-light">
+                <span className="grid h-14 w-14 place-items-center rounded-full bg-gold/15 text-accent-ink">
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12l4.5 4.5L19 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <h3 className="mt-5 font-display text-xl text-cream">Almost there</h3>
-                <p className="mt-2 max-w-[34ch] text-sm text-cream/70">
+                <h3 className="mt-5 font-display text-xl text-ink">Almost there</h3>
+                <p className="mt-2 max-w-[34ch] text-sm text-muted">
                   Your mail app should have opened with your message ready to
                   send. If it didn&rsquo;t,{" "}
-                  <a href={mailtoHref} className="text-gold-light underline">
+                  <a href={mailtoHref} className="text-accent-ink underline">
                     send it directly
                   </a>{" "}
                   or email us at{" "}
-                  <a href={`mailto:${brand.email}`} className="text-gold-light underline">
+                  <a href={`mailto:${brand.email}`} className="text-accent-ink underline">
                     {brand.email}
                   </a>
                   .
@@ -114,13 +114,13 @@ export default function Contact() {
                 </div>
                 <Field label="Email" name="email" type="email" placeholder="you@company.com" autoComplete="email" />
                 <div>
-                  <label htmlFor="interest" className="mb-1.5 block text-sm font-medium text-cream/80">
+                  <label htmlFor="interest" className="mb-1.5 block text-sm font-medium text-ink">
                     I&rsquo;m reaching out as
                   </label>
                   <select
                     id="interest"
                     name="interest"
-                    className="w-full rounded-lg border border-gold-light/20 bg-forest-deep/60 px-4 py-3 text-sm text-cream outline-none focus:border-gold-light"
+                    className="w-full rounded-lg border border-line bg-ground px-4 py-3 text-sm text-ink outline-none focus:border-gold"
                     defaultValue="Investor"
                   >
                     <option>Investor</option>
@@ -131,7 +131,7 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-cream/80">
+                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink">
                     Message
                   </label>
                   <textarea
@@ -140,13 +140,13 @@ export default function Contact() {
                     rows={4}
                     required
                     placeholder="Tell us how you'd like to work together…"
-                    className="w-full resize-none rounded-lg border border-gold-light/20 bg-forest-deep/60 px-4 py-3 text-sm text-cream placeholder:text-cream/60 outline-none focus:border-gold-light"
+                    className="w-full resize-none rounded-lg border border-line bg-ground px-4 py-3 text-sm text-ink placeholder:text-muted outline-none focus:border-gold"
                   />
                 </div>
                 <button type="submit" className="btn btn-gold w-full">
                   Send Message
                 </button>
-                <p className="text-center text-xs text-cream/60">
+                <p className="text-center text-xs text-muted">
                   Opens in your mail app, addressed to {brand.email}.
                 </p>
               </form>
@@ -175,7 +175,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-1.5 block text-sm font-medium text-cream/80">
+      <label htmlFor={name} className="mb-1.5 block text-sm font-medium text-ink">
         {label}
       </label>
       <input
@@ -185,7 +185,7 @@ function Field({
         required={required}
         placeholder={placeholder}
         autoComplete={autoComplete}
-        className="w-full rounded-lg border border-gold-light/20 bg-forest-deep/60 px-4 py-3 text-sm text-cream placeholder:text-cream/60 outline-none focus:border-gold-light"
+        className="w-full rounded-lg border border-line bg-ground px-4 py-3 text-sm text-ink placeholder:text-muted outline-none focus:border-gold"
       />
     </div>
   );
@@ -193,7 +193,7 @@ function Field({
 
 function ContactIcon({ type }: { type: "mail" | "phone" | "pin" }) {
   return (
-    <span className="grid h-9 w-9 flex-none place-items-center rounded-full border border-gold-light/25 text-gold-light">
+    <span className="grid h-9 w-9 flex-none place-items-center rounded-full border border-line text-accent-ink">
       {type === "mail" && (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.6" />
