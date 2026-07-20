@@ -50,7 +50,12 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#contact" className="btn btn-forest hidden sm:inline-flex">
+          <a
+            href="#contact"
+            className={`btn btn-forest hidden transition-opacity duration-300 sm:inline-flex ${
+              solid ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
+          >
             Partner With Us
           </a>
           <button
