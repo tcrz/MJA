@@ -19,7 +19,7 @@ export default function Hero() {
         // Unsplash's CDN already handles format + sizing (auto=format&w=).
         // Skip Next's image optimizer, which 500s on these remote sources.
         unoptimized
-        className="object-cover"
+        className="hero-photo-in object-cover"
       />
       {/* Moody scrim: dark enough to hold text contrast over the photo's
           brightest areas, light enough to actually let the photo read.
