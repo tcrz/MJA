@@ -170,20 +170,36 @@ export const roadmap = [
 
 export const pillars = [
   {
-    title: "Licensing & Compliance",
-    desc: "Full compliance with COCOBOD and Ghana Gold Board requirements, every season.",
+    title: "Sustainable Sourcing",
+    desc: "Ethical sourcing, strong farmer relationships and responsible practices.",
+  },
+  {
+    title: "Investment Growth",
+    desc: "Build a diversified investment portfolio and create long-term shareholder value.",
   },
   {
     title: "Operational Excellence",
-    desc: "Efficient processes, technology and disciplined cost management.",
+    desc: "Efficient processes, quality systems and cost leadership across the value chain.",
   },
   {
-    title: "People & Culture",
-    desc: "Build a skilled, ethical and high-performance team.",
+    title: "Digital Innovation",
+    desc: "Leverage technology for market intelligence, traceability and decision making.",
   },
   {
-    title: "Growth & Diversification",
-    desc: "Expand markets, commodities and strategic partnerships.",
+    title: "Farmer & Supplier Development",
+    desc: "Empower farmers and suppliers through training, finance and technical support.",
+  },
+  {
+    title: "Market Expansion",
+    desc: "Expand locally and internationally to new markets and customer segments.",
+  },
+  {
+    title: "Risk Management",
+    desc: "Proactive risk management and strong compliance culture.",
+  },
+  {
+    title: "ESG & Sustainability",
+    desc: "Create positive environmental, social and governance impact.",
   },
 ];
 

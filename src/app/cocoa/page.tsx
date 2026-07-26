@@ -68,6 +68,7 @@ export default function CocoaPage() {
           intro={cocoa.pillarsIntro}
           icons={pillarsIcons}
           image={pillarsImage}
+          variant="lead"
         />
         <Contact />
       </main>
