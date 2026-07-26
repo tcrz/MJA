@@ -57,7 +57,7 @@ export default function Hero({
         }}
       />
 
-      <div className="container-x relative flex min-h-[92vh] flex-col justify-center pt-28 pb-20">
+      <div className="container-x relative flex min-h-screen flex-col justify-center pt-28 pb-20">
 
         <Reveal delay={80}>
           <h1 className="mt-6 max-w-[16ch] text-[clamp(2.6rem,7vw,5.3rem)] leading-[1.02] tracking-[-0.02em]">
