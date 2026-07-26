@@ -32,7 +32,7 @@ export const hero = {
   headlineLine2: "Creating Value.",
   emphasis: "Value",
   subheadline:
-    "A Ghana-based, diversified commodities and investment company - currently active in cocoa trading and licensed for gold, with a five-year plan to grow across the full commodities value chain.",
+    "A Ghana-based commodities and investment company built on integrity and built for scale - turning trusted sourcing relationships into lasting value across Africa's commodities markets.",
   ctaPrimary: { label: "Partner With Us", href: "#contact" },
 };
 

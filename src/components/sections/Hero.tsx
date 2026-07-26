@@ -10,14 +10,14 @@ type HeroContent = typeof defaultHero & {
 };
 type HeroImage = { src: string; alt: string };
 
-// Homepage default: one slide per active/licensed line of business (cocoa,
-// gold), plus export/shipping and aggregation/logistics standing in for the
-// five-year plan's future direction — not the full raw commodity list from
-// the strategy deck, so the carousel never implies more lines are live than
-// actually are.
+// Homepage default: one slide per active/licensed line of business (gold,
+// cocoa), plus farmer sourcing, export/shipping, and aggregation/logistics
+// standing in for the five-year plan's future direction — not the full raw
+// commodity list from the strategy deck, so the carousel never implies more
+// lines are live than actually are.
 const defaultImages: HeroImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1759272840712-c7e5ea852367?auto=format&fit=crop&w=2400&q=75",
+    src: "https://images.unsplash.com/photo-1718752773274-4baba3906300?auto=format&fit=crop&w=2400&q=75",
     alt: "",
   },
   {
@@ -25,7 +25,11 @@ const defaultImages: HeroImage[] = [
     alt: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1718752773274-4baba3906300?auto=format&fit=crop&w=2400&q=75",
+    src: "https://images.unsplash.com/photo-1507576164121-220762647800?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1759272840712-c7e5ea852367?auto=format&fit=crop&w=2400&q=75",
     alt: "",
   },
   {
