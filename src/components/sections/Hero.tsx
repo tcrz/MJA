@@ -16,15 +16,15 @@ type HeroImage = { src: string; alt: string };
 // lines are live than actually are.
 const defaultImages: HeroImage[] = [
   {
+    src: "https://images.unsplash.com/photo-1759272840712-c7e5ea852367?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+  {
     src: "https://images.unsplash.com/photo-1663904459101-78345f6b8300?auto=format&fit=crop&w=2400&q=75",
     alt: "",
   },
   {
     src: "https://images.unsplash.com/photo-1718752773274-4baba3906300?auto=format&fit=crop&w=2400&q=75",
-    alt: "",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1759272840712-c7e5ea852367?auto=format&fit=crop&w=2400&q=75",
     alt: "",
   },
 ];
