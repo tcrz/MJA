@@ -1,8 +1,17 @@
 import Image from "next/image";
 import Reveal from "../Reveal";
-import { impact, advantages } from "@/lib/content";
+import { impact as defaultImpact, advantages as defaultAdvantages } from "@/lib/content";
 
-export default function Impact() {
+type ImpactContent = typeof defaultImpact;
+type AdvantagesContent = typeof defaultAdvantages;
+
+export default function Impact({
+  impact = defaultImpact,
+  advantages = defaultAdvantages,
+}: {
+  impact?: ImpactContent;
+  advantages?: AdvantagesContent;
+}) {
   return (
     <section id="impact" className="bg-ground py-24 md:py-32">
       <div className="container-x">

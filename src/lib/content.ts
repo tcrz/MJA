@@ -1,15 +1,19 @@
 /**
- * Single source of truth for landing-page copy, derived from the
- * MJ Adom Cocoa Trading Business Strategy 2026–2030.
- * Keeping content here (not inline in JSX) keeps sections declarative
- * and makes the eventual CMS/ERP migration a straight data swap.
+ * Single source of truth for landing-page copy.
+ *
+ * Identity is deliberately broad — "commodities and investment company",
+ * not "cocoa trader" — so new licences/services slot into `services` below
+ * without a redesign. Within `services`, `status` gates how confidently a
+ * line of business is presented: only say a service is running if it
+ * actually is. Cocoa is active; gold is licensed but not yet operating;
+ * everything past that is roadmap/future direction, not a current offer.
  */
 
 export const brand = {
   name: "MJ Adom",
-  full: "MJ Adom Cocoa Trading",
-  tagline: "Integrity. Quality. Partnership. Prosperity.",
-  slogan: "We don't just buy cocoa, we build futures.",
+  full: "MJ Adom Commodities & Investments",
+  tagline: "Integrity. Excellence. Innovation. Partnership. Sustainability.",
+  slogan: "Trading Commodities. Creating Value. Building Prosperity.",
   location: "Ghana",
   established: 2026,
   email: "hello@mjadom.com",
@@ -18,115 +22,162 @@ export const brand = {
 
 export const nav = [
   { label: "About", href: "#about" },
-  { label: "Model", href: "#model" },
+  { label: "Services", href: "#services" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Impact", href: "#impact" },
   { label: "Invest", href: "#invest" },
 ] as const;
 
+export const hero = {
+  headlineLine1: "Trading Commodities.",
+  headlineLine2: "Creating Value.",
+  emphasis: "Value",
+  subheadline:
+    "A Ghana-based, diversified commodities and investment company — currently active in cocoa trading and licensed for gold, with a five-year plan to grow across the full commodities value chain.",
+  ctaPrimary: { label: "Partner With Us", href: "#contact" },
+  ctaSecondary: { label: "Our 5-Year Vision", href: "#roadmap" },
+};
+
+export const roadmapIntro = {
+  heading: "From today's licences to a legacy tomorrow",
+  emphasis: "legacy tomorrow",
+  body: "A deliberate path from foundation to market leadership — each year building on the last.",
+};
+
+export const pillarsIntro = {
+  title: "Five pillars holding up the plan",
+  intro:
+    "Every decision maps back to one of these — the structure that turns today's licences into a five-year legacy.",
+};
+
+export const footerNote =
+  "Licensed commodities trading company, Ghana.";
+
 export const about = {
-  heading: "A Ghanaian cocoa house, built on integrity",
+  heading: "Built on Integrity. Driven by Opportunity.",
   body: [
-    "MJ Adom Cocoa Trading has been granted a One-Year Temporary Licensed Buying Certificate to purchase cocoa in Ghana — the first step of a deliberate, long-term plan.",
-    "Our strategy is to build a strong foundation, operate with integrity, empower farmers, ensure quality, and scale sustainably to become a major player in the cocoa value chain within five years.",
+    "MJ Adom Commodities & Investments is a Ghana-based company building a diversified commodities and investment business across Africa — connecting farmers and resource holders to global markets, and creating long-term value for our partners and communities.",
+    "We are currently active in agricultural commodities trading: cocoa buying is underway under our Licensed Buying Company certificate, and gold buying is licensed under the Ghana Gold Board and launching soon. These two licences are the foundation of a broader five-year plan to grow into aggregation, logistics, processing, export, and strategic investment.",
   ],
 };
 
 export const vision = {
   vision:
-    "To be a leading, trusted and sustainable cocoa trading company in Ghana and beyond.",
+    "To become one of Africa's most trusted commodities and investment companies — creating sustainable prosperity for farmers, businesses, investors, and communities.",
   mission:
-    "To source, trade and deliver high-quality cocoa while creating value for farmers, customers, employees and shareholders.",
+    "To source, trade and invest in high-value commodities through integrity, operational excellence, and strategic partnership — building a strong foundation today for a diversified enterprise tomorrow.",
 };
 
-export const model = {
-  heading: "From farm gate to export market",
-  intro:
-    "We buy from farmers, ensure quality, aggregate, store and sell to local processors and export markets — profitably and sustainably.",
-  steps: [
-    {
-      title: "Farmer Sourcing",
-      desc: "Direct, trusted relationships with farmers across cocoa-growing regions.",
-    },
-    {
-      title: "Collection & Aggregation",
-      desc: "Efficient logistics that consolidate volume from farm gate to depot.",
-    },
-    {
-      title: "Quality Control",
-      desc: "Grading, testing and strict quality control on every batch.",
-    },
-    {
-      title: "Storage & Management",
-      desc: "Well-managed warehousing that protects grade and value.",
-    },
-    {
-      title: "Local Sales & Export",
-      desc: "Sales to local processors and international export markets.",
-    },
-  ],
-};
+export const values = [
+  { title: "Integrity", desc: "We do business honestly and transparently, building trust with every partner and community we engage." },
+  { title: "Excellence", desc: "We hold ourselves to the highest standards across operations, compliance, and service delivery." },
+  { title: "Innovation", desc: "We leverage technology and data to drive smarter decisions across the commodities value chain." },
+  { title: "Partnership", desc: "We grow by growing others — farmers, suppliers, investors, and local communities." },
+  { title: "Sustainability", desc: "We are committed to responsible sourcing, environmental stewardship, and long-term value creation." },
+  { title: "Prosperity", desc: "Our ultimate measure of success is the shared prosperity we create across Africa." },
+] as const;
+
+export type ServiceStatus = "active" | "licensed" | "future";
+
+export const services = [
+  {
+    title: "Agricultural Commodities Trading — Cocoa",
+    desc: "Sourcing and buying cocoa from farmers across Ghana under our Licensed Buying Company certificate, with quality and traceability built in from the farm gate.",
+    status: "active" as ServiceStatus,
+    statusLabel: "Active",
+  },
+  {
+    title: "Agricultural Commodities Trading — Gold",
+    desc: "Gold buying licensed under the Ghana Gold Board, with operations launching soon as our second active line of business.",
+    status: "licensed" as ServiceStatus,
+    statusLabel: "Licensed — Launching Soon",
+  },
+  {
+    title: "Commodity Aggregation & Logistics",
+    desc: "Consolidating volume and managing the logistics required to move commodities efficiently, from farm gate to final destination.",
+    status: "future" as ServiceStatus,
+    statusLabel: "Future Direction",
+  },
+  {
+    title: "Commodity Processing & Value Addition",
+    desc: "Investing in processing capability that transforms raw commodities into higher-value products.",
+    status: "future" as ServiceStatus,
+    statusLabel: "Future Direction",
+  },
+  {
+    title: "Export & International Trade",
+    desc: "Facilitating the export of Ghanaian and African commodities to global markets, navigating compliance and international trade requirements.",
+    status: "future" as ServiceStatus,
+    statusLabel: "Future Direction",
+  },
+  {
+    title: "Strategic Investments & Partnerships",
+    desc: "Identifying and investing in high-potential opportunities across commodities, processing, and related sectors.",
+    status: "future" as ServiceStatus,
+    statusLabel: "Future Direction",
+  },
+];
 
 export const roadmap = [
   {
     year: "2026",
-    phase: "Build & Stabilize",
+    phase: "Foundation",
     points: [
-      "Build strong farmer relationships",
-      "Establish procurement systems",
-      "Ensure quality & compliance",
-      "Achieve volume & financial stability",
+      "Build farmer and supplier relationships",
+      "Establish procurement and governance systems",
+      "Ensure licensing and regulatory compliance",
+      "Launch gold buying operations",
     ],
   },
   {
     year: "2027",
-    phase: "Strengthen & Optimize",
+    phase: "Growth",
     points: [
-      "Expand sourcing areas",
-      "Improve logistics",
-      "Implement technology systems",
+      "Expand our commodity portfolio",
+      "Strengthen aggregation and logistics",
+      "Deploy digital trading and traceability systems",
       "Grow market presence",
     ],
   },
   {
     year: "2028",
-    phase: "Scale & Expand",
+    phase: "Expansion",
     points: [
-      "Increase cocoa volumes",
-      "Expand warehouse capacity",
-      "Explore export opportunities",
-      "Build strong partnerships",
+      "Enter regional West African markets",
+      "Develop warehousing and storage capacity",
+      "Launch value-added and processed offerings",
+      "Build strong strategic partnerships",
     ],
   },
   {
     year: "2029",
-    phase: "Diversify & Innovate",
+    phase: "Diversification",
     points: [
-      "Add value: sorting, aggregation, storage",
-      "Explore cocoa processing",
-      "Expand into new markets",
-      "Invest in farmer communities",
+      "Invest in processing facilities",
+      "Expand into new commodity sectors",
+      "Grow our investment portfolio",
+      "Explore strategic partnerships and M&A",
     ],
   },
   {
     year: "2030",
-    phase: "Lead & Sustain",
+    phase: "Market Leadership",
     points: [
-      "Become a top-tier cocoa buying company",
-      "Strong export presence",
-      "Build a legacy of excellence",
+      "Establish a pan-African presence",
+      "Build a diversified investment portfolio",
+      "Lead on innovation and sustainability",
     ],
   },
 ] as const;
 
 export const pillars = [
   {
-    title: "Farmer-Centered Sourcing",
+    title: "Farmer & Supplier-Centered Sourcing",
     desc: "Build trust, support and long-term relationships at the root of the chain.",
   },
   {
-    title: "Quality & Compliance",
-    desc: "Ensure high-quality cocoa and full COCOBOD compliance, every season.",
+    title: "Licensing & Compliance",
+    desc: "Full compliance with COCOBOD and Ghana Gold Board requirements, every season.",
   },
   {
     title: "Operational Excellence",
@@ -138,12 +189,12 @@ export const pillars = [
   },
   {
     title: "Growth & Diversification",
-    desc: "Expand markets, products and strategic partnerships.",
+    desc: "Expand markets, commodities and strategic partnerships.",
   },
 ];
 
 export const advantages = [
-  "Farmer trust and long-term relationships",
+  "Farmer and supplier trust and long-term relationships",
   "Strong commitment to quality",
   "Efficient operations and technology",
   "Ethical and transparent practices",
@@ -152,19 +203,18 @@ export const advantages = [
 ];
 
 export const impact = [
-  "Improve farmer income and livelihoods",
-  "Promote sustainable cocoa farming",
+  "Improve farmer and supplier income and livelihoods",
+  "Promote responsible, sustainable sourcing",
   "Create jobs and develop communities",
-  "Support national cocoa development",
+  "Support national commodities sector development",
   "Operate with integrity and transparency",
   "Protect the environment",
 ];
 
-// Order is deliberate: the license — the one claim already true today —
-// leads. Growth targets and roadmap length follow as supporting evidence,
-// not the headline.
+// Order is deliberate: the claims already true today lead. Growth targets
+// and roadmap length follow as supporting evidence, not the headline.
 export const financials = [
-  { value: "100%", label: "COCOBOD compliance commitment" },
+  { value: "2", label: "Active & licensed trading lines" },
   { value: "25–35%", label: "Targeted annual turnover growth" },
   { value: "5 yr", label: "Roadmap to market leadership" },
   { value: "6", label: "Core values guiding every decision" },
@@ -172,8 +222,8 @@ export const financials = [
 
 export const formula = {
   terms: [
-    { small: "Trusted", big: "Farmer Relationships" },
-    { small: "Consistent", big: "Quality Cocoa" },
+    { small: "Trusted", big: "Farmer & Supplier Relationships" },
+    { small: "Consistent", big: "Quality & Compliance" },
     { small: "Efficient", big: "Operations" },
     { small: "Strong", big: "Partnerships" },
     { small: "Skilled & Ethical", big: "Team" },

@@ -1,10 +1,12 @@
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
-import { model } from "@/lib/content";
+import { model as defaultModel } from "@/lib/content.cocoa";
+
+type ModelContent = typeof defaultModel;
 
 const stepIcons = [FarmerIcon, TruckIcon, ShieldIcon, WarehouseIcon, ExportIcon];
 
-export default function Model() {
+export default function Model({ model = defaultModel }: { model?: ModelContent }) {
   return (
     <section id="model" className="bg-ground py-24 md:py-32">
       <div className="container-x">

@@ -1,7 +1,16 @@
 import Reveal from "../Reveal";
-import { about, vision } from "@/lib/content";
+import { about as defaultAbout, vision as defaultVision } from "@/lib/content";
 
-export default function About() {
+type AboutContent = typeof defaultAbout;
+type VisionContent = typeof defaultVision;
+
+export default function About({
+  about = defaultAbout,
+  vision = defaultVision,
+}: {
+  about?: AboutContent;
+  vision?: VisionContent;
+}) {
   return (
     <section id="about" className="bg-forest-deep py-24 text-cream md:py-32">
       <div className="container-x">

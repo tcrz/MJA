@@ -1,5 +1,7 @@
 import Reveal from "../Reveal";
-import { formula } from "@/lib/content";
+import { formula as defaultFormula } from "@/lib/content";
+
+type FormulaContent = typeof defaultFormula;
 
 const objectives = [
   "Targeting profitability from Year 1",
@@ -10,7 +12,7 @@ const objectives = [
   "Build strong financial reserves",
 ];
 
-export default function Invest() {
+export default function Invest({ formula = defaultFormula }: { formula?: FormulaContent }) {
   return (
     <section id="invest" className="relative overflow-hidden bg-forest-deep py-24 text-cream md:py-32">
       <div

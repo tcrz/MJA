@@ -2,9 +2,20 @@
 
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import { nav } from "@/lib/content";
+import { nav as defaultNav, brand as defaultBrand } from "@/lib/content";
 
-export default function Nav() {
+type NavContent = readonly { label: string; href: string }[];
+type BrandContent = { full: string; [key: string]: unknown };
+
+export default function Nav({
+  nav = defaultNav,
+  brand = defaultBrand,
+  logoSubtext,
+}: {
+  nav?: NavContent;
+  brand?: BrandContent;
+  logoSubtext?: string;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,8 +40,8 @@ export default function Nav() {
       }`}
     >
       <div className="container-x flex h-[72px] items-center justify-between">
-        <a href="#top" aria-label="MJ Adom Cocoa Trading — home">
-          <Logo variant={solid ? "ink" : "light"} />
+        <a href="#top" aria-label={`${brand.full} — home`}>
+          <Logo variant={solid ? "ink" : "light"} subtext={logoSubtext} />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">

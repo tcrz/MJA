@@ -1,21 +1,27 @@
 import Image from "next/image";
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
-import { pillars } from "@/lib/content";
+import { pillars as defaultPillars, pillarsIntro as defaultIntro } from "@/lib/content";
+
+type PillarsContent = typeof defaultPillars;
+type PillarsIntro = typeof defaultIntro;
 
 const icons = [SeedIcon, BadgeIcon, GearIcon, PeopleIcon, GrowthIcon];
 
-export default function Pillars() {
+export default function Pillars({
+  pillars = defaultPillars,
+  intro = defaultIntro,
+}: {
+  pillars?: PillarsContent;
+  intro?: PillarsIntro;
+}) {
   const [lead, ...rest] = pillars;
   const LeadIcon = icons[0];
 
   return (
     <section id="pillars" className="bg-surface-2 py-24 md:py-32">
       <div className="container-x">
-        <SectionHeading
-          title="Five pillars holding up the plan"
-          intro="Every decision maps back to one of these — the structure that turns a one-year license into a five-year legacy."
-        />
+        <SectionHeading title={intro.title} intro={intro.intro} />
 
         {/* Sourcing leads: it's the pillar every other one depends on, so
             it gets the weight — not five equal-weight tiles pretending

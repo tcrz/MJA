@@ -2,7 +2,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-import Model from "@/components/sections/Model";
+import Services from "@/components/sections/Services";
 import Roadmap from "@/components/sections/Roadmap";
 import Pillars from "@/components/sections/Pillars";
 import Impact from "@/components/sections/Impact";
@@ -16,7 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Model />
+        <Services />
         <Roadmap />
         <Pillars />
         <Impact />

@@ -21,25 +21,26 @@ const SITE_URL = "https://mjadom.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "MJ Adom Cocoa Trading — We don't just buy cocoa, we build futures",
-    template: "%s · MJ Adom Cocoa Trading",
+    default: "MJ Adom Commodities & Investments — Trading Commodities. Creating Value.",
+    template: "%s · MJ Adom Commodities & Investments",
   },
   description:
-    "A COCOBOD-licensed cocoa buying and export company in Ghana, built on ethical sourcing, quality, and farmer partnership — from a license today to a legacy tomorrow.",
+    "A Ghana-based, diversified commodities and investment company — active in cocoa trading, licensed for gold, and building toward a five-year plan across the commodities value chain.",
   keywords: [
+    "commodities trading Ghana",
     "cocoa trading Ghana",
+    "gold buying Ghana",
     "COCOBOD licensed buyer",
-    "cocoa export",
-    "ethical cocoa sourcing",
+    "Ghana Gold Board",
     "MJ Adom",
   ],
   openGraph: {
-    title: "MJ Adom Cocoa Trading",
+    title: "MJ Adom Commodities & Investments",
     description:
-      "Ethical sourcing. Quality you can trust. Farmer partnerships built to last. Ghana's next leading cocoa house.",
+      "Trading Commodities. Creating Value. Building Prosperity. A diversified commodities and investment company building across Africa.",
     type: "website",
     locale: "en_GH",
-    siteName: "MJ Adom Cocoa Trading",
+    siteName: "MJ Adom Commodities & Investments",
   },
 };
 

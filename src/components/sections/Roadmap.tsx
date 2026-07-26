@@ -1,7 +1,25 @@
 import Reveal from "../Reveal";
-import { roadmap } from "@/lib/content";
+import { roadmap as defaultRoadmap, roadmapIntro as defaultIntro } from "@/lib/content";
 
-export default function Roadmap() {
+type RoadmapContent = readonly {
+  year: string;
+  phase: string;
+  points: readonly string[];
+}[];
+type RoadmapIntro = { heading: string; emphasis: string; body: string };
+
+export default function Roadmap({
+  roadmap = defaultRoadmap,
+  intro = defaultIntro,
+}: {
+  roadmap?: RoadmapContent;
+  intro?: RoadmapIntro;
+}) {
+  const emphasisIndex = intro.heading.indexOf(intro.emphasis);
+  const before = emphasisIndex >= 0 ? intro.heading.slice(0, emphasisIndex) : intro.heading;
+  const after =
+    emphasisIndex >= 0 ? intro.heading.slice(emphasisIndex + intro.emphasis.length) : "";
+
   return (
     <section id="roadmap" className="relative overflow-hidden bg-forest-deep py-24 text-cream md:py-32">
       <div
@@ -15,13 +33,13 @@ export default function Roadmap() {
       <div className="container-x relative">
         <Reveal className="max-w-2xl">
           <h2 className="text-[clamp(1.8rem,3.8vw,2.7rem)] text-cream">
-            From a license today to a{" "}
-            <span className="gold-text">legacy tomorrow</span>
+            {before}
+            {emphasisIndex >= 0 ? (
+              <span className="gold-text">{intro.emphasis}</span>
+            ) : null}
+            {after}
           </h2>
-          <p className="mt-4 text-lg text-cream/75">
-            A deliberate path from foundation to market leadership — each year
-            building on the last.
-          </p>
+          <p className="mt-4 text-lg text-cream/75">{intro.body}</p>
         </Reveal>
 
         {/* Horizontal connector line (desktop) */}

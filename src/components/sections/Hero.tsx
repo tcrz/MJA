@@ -1,9 +1,26 @@
 import Image from "next/image";
 import Reveal from "../Reveal";
-import { financials } from "@/lib/content";
+import { hero as defaultHero, financials as defaultFinancials } from "@/lib/content";
 
-export default function Hero() {
+type HeroContent = typeof defaultHero;
+type FinancialsContent = typeof defaultFinancials;
+
+export default function Hero({
+  hero = defaultHero,
+  financials = defaultFinancials,
+}: {
+  hero?: HeroContent;
+  financials?: FinancialsContent;
+}) {
   const [primaryStat, ...supportingStats] = financials;
+
+  // Highlight the configured substring within line 2 (e.g. "build futures").
+  const emphasisIndex = hero.headlineLine2.indexOf(hero.emphasis);
+  const before = emphasisIndex >= 0 ? hero.headlineLine2.slice(0, emphasisIndex) : hero.headlineLine2;
+  const after =
+    emphasisIndex >= 0
+      ? hero.headlineLine2.slice(emphasisIndex + hero.emphasis.length)
+      : "";
 
   return (
     <section
@@ -40,27 +57,29 @@ export default function Hero() {
 
         <Reveal delay={80}>
           <h1 className="mt-6 max-w-[16ch] text-[clamp(2.6rem,7vw,5.3rem)] leading-[1.02] tracking-[-0.02em]">
-            We don&rsquo;t just buy cocoa,
+            {hero.headlineLine1}
             <br />
-            we <em className="gold-text not-italic font-semibold">build futures</em>.
+            {before}
+            {emphasisIndex >= 0 ? (
+              <em className="gold-text not-italic font-semibold">{hero.emphasis}</em>
+            ) : null}
+            {after}
           </h1>
         </Reveal>
 
         <Reveal delay={160}>
           <p className="mt-7 max-w-[52ch] text-[clamp(1rem,1.6vw,1.2rem)] text-cream/80">
-            Ethical sourcing, quality you can trust, and farmer partnerships built
-            to last — the foundation of a Ghanaian cocoa house built to endure.
-            From a license today to a legacy tomorrow.
+            {hero.subheadline}
           </p>
         </Reveal>
 
         <Reveal delay={240}>
           <div className="mt-9 flex flex-wrap gap-4">
-            <a href="#contact" className="btn btn-gold">
-              Partner With Us
+            <a href={hero.ctaPrimary.href} className="btn btn-gold">
+              {hero.ctaPrimary.label}
             </a>
-            <a href="#roadmap" className="btn btn-ghost-light">
-              Our 5-Year Vision
+            <a href={hero.ctaSecondary.href} className="btn btn-ghost-light">
+              {hero.ctaSecondary.label}
             </a>
           </div>
         </Reveal>

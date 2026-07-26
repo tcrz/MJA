@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T00:00:00.000Z",
+  "title": "Design System: MJ Adom Commodities & Investments",
+  "extensions": {
+    "colorMeta": {
+      "forest-deep": {
+        "role": "primary",
+        "displayName": "Forest Deep",
+        "canonical": "oklch(22% 0.05 152)",
+        "tonalRamp": [
+          "oklch(12% 0.03 152)",
+          "oklch(18% 0.04 152)",
+          "oklch(22% 0.05 152)",
+          "oklch(30% 0.07 152)",
+          "oklch(40% 0.09 152)",
+          "oklch(55% 0.1 152)",
+          "oklch(72% 0.08 152)",
+          "oklch(90% 0.03 152)"
+        ]
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Forest",
+        "canonical": "oklch(40% 0.1 152)",
+        "tonalRamp": [
+          "oklch(14% 0.03 152)",
+          "oklch(22% 0.05 152)",
+          "oklch(30% 0.08 152)",
+          "oklch(40% 0.1 152)",
+          "oklch(50% 0.11 152)",
+          "oklch(63% 0.11 152)",
+          "oklch(78% 0.08 152)",
+          "oklch(92% 0.03 152)"
+        ]
+      },
+      "forest-soft": {
+        "role": "primary",
+        "displayName": "Forest Soft",
+        "canonical": "oklch(48% 0.1 148)",
+        "tonalRamp": [
+          "oklch(16% 0.03 148)",
+          "oklch(26% 0.06 148)",
+          "oklch(36% 0.08 148)",
+          "oklch(48% 0.1 148)",
+          "oklch(58% 0.1 148)",
+          "oklch(70% 0.09 148)",
+          "oklch(83% 0.06 148)",
+          "oklch(94% 0.02 148)"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Earned Gold",
+        "canonical": "oklch(64% 0.13 80)",
+        "tonalRamp": [
+          "oklch(20% 0.05 80)",
+          "oklch(32% 0.08 80)",
+          "oklch(44% 0.11 80)",
+          "oklch(56% 0.13 80)",
+          "oklch(64% 0.13 80)",
+          "oklch(74% 0.12 80)",
+          "oklch(84% 0.09 80)",
+          "oklch(94% 0.04 80)"
+        ]
+      },
+      "gold-light": {
+        "role": "secondary",
+        "displayName": "Gold Light",
+        "canonical": "oklch(80% 0.12 85)",
+        "tonalRamp": [
+          "oklch(30% 0.06 85)",
+          "oklch(42% 0.09 85)",
+          "oklch(54% 0.12 85)",
+          "oklch(66% 0.13 85)",
+          "oklch(74% 0.13 85)",
+          "oklch(80% 0.12 85)",
+          "oklch(88% 0.08 85)",
+          "oklch(96% 0.03 85)"
+        ]
+      },
+      "cocoa": {
+        "role": "tertiary",
+        "displayName": "Cocoa Heritage",
+        "canonical": "oklch(32% 0.06 45)",
+        "tonalRamp": [
+          "oklch(12% 0.03 45)",
+          "oklch(20% 0.05 45)",
+          "oklch(26% 0.06 45)",
+          "oklch(32% 0.06 45)",
+          "oklch(44% 0.07 45)",
+          "oklch(58% 0.07 45)",
+          "oklch(74% 0.05 45)",
+          "oklch(90% 0.02 45)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream Ground",
+        "canonical": "oklch(96% 0.015 90)",
+        "tonalRamp": [
+          "oklch(20% 0.02 90)",
+          "oklch(34% 0.02 90)",
+          "oklch(48% 0.02 90)",
+          "oklch(62% 0.02 90)",
+          "oklch(76% 0.02 90)",
+          "oklch(88% 0.02 90)",
+          "oklch(94% 0.015 90)",
+          "oklch(98% 0.008 90)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Warm Surface",
+        "canonical": "oklch(99% 0.008 90)",
+        "tonalRamp": [
+          "oklch(22% 0.015 90)",
+          "oklch(36% 0.015 90)",
+          "oklch(50% 0.015 90)",
+          "oklch(64% 0.012 90)",
+          "oklch(78% 0.012 90)",
+          "oklch(90% 0.01 90)",
+          "oklch(96% 0.008 90)",
+          "oklch(99% 0.005 90)"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Warm Surface Deep",
+        "canonical": "oklch(92% 0.02 85)",
+        "tonalRamp": [
+          "oklch(24% 0.02 85)",
+          "oklch(38% 0.02 85)",
+          "oklch(52% 0.02 85)",
+          "oklch(66% 0.02 85)",
+          "oklch(78% 0.02 85)",
+          "oklch(86% 0.02 85)",
+          "oklch(92% 0.02 85)",
+          "oklch(97% 0.01 85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(18% 0.015 130)",
+        "tonalRamp": [
+          "oklch(8% 0.01 130)",
+          "oklch(18% 0.015 130)",
+          "oklch(30% 0.02 130)",
+          "oklch(44% 0.02 130)",
+          "oklch(58% 0.02 130)",
+          "oklch(72% 0.02 130)",
+          "oklch(86% 0.015 130)",
+          "oklch(95% 0.008 130)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Sage",
+        "canonical": "oklch(48% 0.03 140)",
+        "tonalRamp": [
+          "oklch(20% 0.02 140)",
+          "oklch(32% 0.025 140)",
+          "oklch(40% 0.03 140)",
+          "oklch(48% 0.03 140)",
+          "oklch(58% 0.03 140)",
+          "oklch(70% 0.025 140)",
+          "oklch(82% 0.02 140)",
+          "oklch(93% 0.01 140)"
+        ]
+      },
+      "accent-ink": {
+        "role": "secondary",
+        "displayName": "Accent Ink (Deep Gold Text)",
+        "canonical": "oklch(42% 0.09 75)",
+        "tonalRamp": [
+          "oklch(16% 0.04 75)",
+          "oklch(26% 0.06 75)",
+          "oklch(34% 0.08 75)",
+          "oklch(42% 0.09 75)",
+          "oklch(52% 0.1 75)",
+          "oklch(64% 0.1 75)",
+          "oklch(78% 0.08 75)",
+          "oklch(92% 0.03 75)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only, one per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s, via SectionHeading." },
+      "title": { "displayName": "Title", "purpose": "Card and pillar H3s." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, capped ~52-65ch." },
+      "label": { "displayName": "Label", "purpose": "Kicker eyebrows and status badges only." }
+    },
+    "shadows": [
+      { "name": "ambient-sm", "value": "0 10px 24px -18px rgba(12,42,23,0.4)", "purpose": "Default resting lift for service/pillar cards." },
+      { "name": "ambient-md", "value": "0 18px 40px -22px rgba(12,42,23,0.42)", "purpose": "Hover state for linked cards; resting state for the single lead/featured card." },
+      { "name": "gold-cta", "value": "0 10px 22px -12px rgba(184,135,31,0.85)", "purpose": "The one shadow that exists at rest, reserved for the primary gold CTA." }
+    ],
+    "motion": [
+      { "name": "reveal-ease", "value": "cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Scroll-reveal fade + lift (opacity/transform), 700ms, respects prefers-reduced-motion." },
+      { "name": "hero-photo-ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "One-time hero photo entrance (scale 1.045 -> 1, opacity 0 -> 1), 900ms, plays once on load." },
+      { "name": "hover-lift-ease", "value": "ease", "purpose": "Button/card translateY(-2px) hover lift, 150-200ms." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Gold)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action the page most wants taken; the only button with a shadow at rest.",
+      "html": "<a href=\"#contact\" class=\"ds-btn-primary\">Partner With Us</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600; font-size: 0.95rem; border-radius: 10px; padding: 0.8rem 1.5rem; border: 1px solid transparent; text-decoration: none; background: linear-gradient(180deg, #e6c566, #b8871f); color: #2a1e06; box-shadow: 0 10px 22px -12px rgba(184,135,31,0.85); transition: transform 0.15s ease, box-shadow 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #b8871f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button (Forest)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Solid forest fill for secondary calls to action, no shadow at rest.",
+      "html": "<a href=\"#services\" class=\"ds-btn-secondary\">Explore Services</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600; font-size: 0.95rem; border-radius: 10px; padding: 0.8rem 1.5rem; border: 1px solid transparent; text-decoration: none; background: #1b5e34; color: #ffffff; transition: transform 0.15s ease, background 0.2s ease; } .ds-btn-secondary:hover { background: #2e7d46; transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 2px solid #b8871f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button (Light, on dark hero)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent secondary CTA for use over the dark forest hero background.",
+      "html": "<a href=\"#about\" class=\"ds-btn-ghost-light\">Learn More</a>",
+      "css": ".ds-btn-ghost-light { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600; font-size: 0.95rem; border-radius: 10px; padding: 0.8rem 1.5rem; text-decoration: none; background: transparent; color: #f5efde; border: 1px solid rgba(230,197,102,0.4); transition: background 0.2s ease; } .ds-btn-ghost-light:hover { background: rgba(230,197,102,0.12); }"
+    },
+    {
+      "name": "Service Card (status-gated)",
+      "kind": "card",
+      "refersTo": "card-service",
+      "description": "Homepage service tile: status badge, title, description, optional 'View details' link for services with a dedicated page.",
+      "html": "<a href=\"/cocoa\" class=\"ds-card-service\"><span class=\"ds-badge ds-badge-active\">Active</span><h3 class=\"ds-card-title\">Agricultural Commodities Trading — Cocoa</h3><p class=\"ds-card-desc\">COCOBOD-licensed cocoa buying, farm to export.</p><span class=\"ds-card-link\">View details <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12h13M13 6l6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>",
+      "css": ".ds-card-service { display: flex; flex-direction: column; height: 100%; border-radius: 14px; border: 1px solid rgba(12,42,23,0.14); background: #fffdf7; padding: 24px; box-shadow: 0 10px 24px -18px rgba(12,42,23,0.4); text-decoration: none; transition: box-shadow 0.2s ease; } .ds-card-service:hover { box-shadow: 0 18px 40px -22px rgba(12,42,23,0.42); } .ds-badge { display: inline-flex; width: fit-content; align-items: center; border-radius: 9999px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; } .ds-badge-active { background: rgba(27,94,52,0.1); color: #1b5e34; } .ds-card-title { margin-top: 20px; font-family: var(--font-fraunces, Georgia, serif); font-size: 1.125rem; font-weight: 600; color: #14170f; } .ds-card-desc { margin-top: 8px; font-size: 0.875rem; line-height: 1.6; color: #5c6a56; } .ds-card-link { margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; font-weight: 600; color: #7a5a12; }"
+    },
+    {
+      "name": "Status Badge (three tiers)",
+      "kind": "chip",
+      "refersTo": "card-service",
+      "description": "The active/licensed/future status vocabulary used across every service tile.",
+      "html": "<span class=\"ds-badge ds-badge-active\">Active</span> <span class=\"ds-badge ds-badge-licensed\">Licensed — Launching Soon</span> <span class=\"ds-badge ds-badge-future\">Future Direction</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; border-radius: 9999px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; } .ds-badge-active { background: rgba(27,94,52,0.1); color: #1b5e34; } .ds-badge-licensed { background: rgba(184,135,31,0.15); color: #7a5a12; } .ds-badge-future { background: rgba(12,42,23,0.06); color: #5c6a56; }"
+    },
+    {
+      "name": "Icon Chip",
+      "kind": "custom",
+      "refersTo": "card-service",
+      "description": "40-48px rounded-square chip holding a single-color line icon; used for pillars and the logo mark.",
+      "html": "<span class=\"ds-icon-chip\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"8\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></span>",
+      "css": ".ds-icon-chip { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px; background: rgba(27,94,52,0.1); color: #1b5e34; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "Fixed header, transparent over the dark hero, solid cream once scrolled.",
+      "html": "<header class=\"ds-nav ds-nav-solid\"><nav class=\"ds-nav-links\"><a href=\"#about\">About</a><a href=\"#services\">Services</a><a href=\"#roadmap\">Roadmap</a></nav><a href=\"#contact\" class=\"ds-btn-secondary\">Partner With Us</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 72px; padding: 0 24px; border-bottom: 1px solid transparent; background: transparent; transition: background 0.3s ease, border-color 0.3s ease; } .ds-nav-solid { border-bottom: 1px solid rgba(12,42,23,0.14); background: rgba(250,245,234,0.85); backdrop-filter: blur(10px); } .ds-nav-links { display: flex; gap: 32px; } .ds-nav-links a { font-size: 0.875rem; font-weight: 500; color: #5c6a56; text-decoration: none; transition: color 0.2s ease; } .ds-nav-links a:hover { color: #14170f; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Licensed House",
+    "overview": "MJ Adom presents itself the way a serious licensed institution presents itself: no flourish standing in for credibility, no claim outrunning what's actually licensed and operating. Deep forest green carries the weight of trust and permanence; gold appears only where something has actually been earned — an active license, a key figure, a call to act. Cream and warm neutrals keep the whole thing legible and human rather than corporate-cold. The system reads as a company that has nothing to prove through decoration, because the proof is the license itself. This directly rejects generic agribusiness stock imagery and crypto/startup hype — nothing in this system should announce itself; it should simply hold up under scrutiny.",
+    "keyCharacteristics": [
+      "Forest green dominates as the institutional ground; gold is rationed to credentials, CTAs, and single emphasized words — never a wash of color.",
+      "Display type is a warm serif (Fraunces), body type a clean grotesque sans (Hanken) — the pairing does the \"warm but credible\" work.",
+      "Flat-to-ambient elevation: shadows lift, they never dramatize.",
+      "Status is always explicit and visually distinct (active vs. licensed-launching-soon vs. future direction) — never let a future service look like it's already operating."
+    ],
+    "rules": [
+      { "name": "The Earned-Gold Rule", "body": "Gold is spent only on things that are true today: an active CTA, a real headline figure, a licensed-status badge. It is never used as a decorative wash, a background tint, or an accent on a future-status element — if gold appears, something underneath it is real.", "section": "colors" },
+      { "name": "The One Dark Section Rule", "body": "Forest Deep is a full-bleed section background (Hero, Roadmap, Footer), never a card or component fill within a light section. Dark and light surfaces don't interleave at the component level — only at the section level.", "section": "colors" },
+      { "name": "The Serif-Carries-Weight Rule", "body": "Any element the brand needs to be taken seriously by (headlines, financial figures, license framing) sets in Fraunces. Anything read for information density sets in Hanken. Never swap the two.", "section": "typography" },
+      { "name": "The Ambient-Not-Structural Rule", "body": "Shadow blur never exceeds ~40px and never pairs with a hard 1px border for definition — a card gets a border for edge definition OR a shadow for lift, articulated softly; it does not stack both as competing signals of depth.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do reserve gold for things that are true today — an active CTA, a real number, an active/licensed status badge (The Earned-Gold Rule).",
+      "Do keep the 14px card radius and 10px button radius as the only two radius values in the system.",
+      "Do pair Fraunces (display/headline/title) with Hanken (body/label) — never introduce a third typeface.",
+      "Do keep shadows soft and ambient (≤40px blur, no hard offset) — depth comes from background-color steps between sections, not deepening shadows.",
+      "Do give every status-gated service (cocoa, gold, future lines) an explicit, visually distinct badge — never let a future item look active."
+    ],
+    "donts": [
+      "Don't use generic agribusiness stock imagery — cliche hands-cupping-beans, sunset-plantation shots, blue-corporate templates.",
+      "Don't reach for stiff corporate/bank styling — cold, grey, PowerPoint-formal, lifeless.",
+      "Don't use crypto/startup hype — neon gradients, \"disrupting cocoa\"-style copy, hockey-stick energy, hollow buzzwords.",
+      "Don't apply gold as a decorative background wash or tint a future-status card with any brand color that implies it's operating.",
+      "Don't pair a 1px border with a wide (16px+) drop shadow on the same card — pick border-for-definition or shadow-for-lift, never both.",
+      "Don't introduce a second border-radius scale (e.g. fully pill-shaped cards, or 24-32px soft corners) — 14px for cards and 10px for buttons are the only two values.",
+      "Don't let the dark Forest Deep surface appear as a component fill inside a light section — it is a full-bleed section background only."
+    ]
+  }
+}
