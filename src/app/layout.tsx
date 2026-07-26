@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     "Ghana Gold Board",
     "MJ Adom",
   ],
+  icons: {
+    icon: "/mja-logo.png",
+    apple: "/mja-logo.png",
+  },
   openGraph: {
     title: "MJ Adom Commodities & Investments",
     description:
@@ -41,6 +45,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GH",
     siteName: "MJ Adom Commodities & Investments",
+    images: [
+      {
+        url: "/mja-logo.png",
+        width: 1254,
+        height: 1254,
+        alt: "MJ Adom Commodities & Investments logo",
+      },
+    ],
   },
 };
 

@@ -2,7 +2,9 @@ import Image from "next/image";
 import Reveal from "../Reveal";
 import { hero as defaultHero } from "@/lib/content";
 
-type HeroContent = typeof defaultHero;
+type HeroContent = typeof defaultHero & {
+  ctaSecondary?: { label: string; href: string };
+};
 
 const defaultImage = {
   src: "https://images.unsplash.com/photo-1568025848823-86404cd04ad1?auto=format&fit=crop&w=2400&q=75",
@@ -80,9 +82,11 @@ export default function Hero({
             <a href={hero.ctaPrimary.href} className="btn btn-gold">
               {hero.ctaPrimary.label}
             </a>
-            <a href={hero.ctaSecondary.href} className="btn btn-ghost-light">
-              {hero.ctaSecondary.label}
-            </a>
+            {hero.ctaSecondary && (
+              <a href={hero.ctaSecondary.href} className="btn btn-ghost-light">
+                {hero.ctaSecondary.label}
+              </a>
+            )}
           </div>
         </Reveal>
       </div>

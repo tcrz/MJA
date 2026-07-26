@@ -23,7 +23,6 @@ export const brand = {
 export const nav = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Roadmap", href: "#roadmap" },
   { label: "Impact", href: "#impact" },
   { label: "Invest", href: "#invest" },
 ] as const;
@@ -35,7 +34,6 @@ export const hero = {
   subheadline:
     "A Ghana-based, diversified commodities and investment company — currently active in cocoa trading and licensed for gold, with a five-year plan to grow across the full commodities value chain.",
   ctaPrimary: { label: "Partner With Us", href: "#contact" },
-  ctaSecondary: { label: "Our 5-Year Vision", href: "#roadmap" },
 };
 
 export const roadmapIntro = {
@@ -190,7 +188,7 @@ export const pillars = [
 ];
 
 export const advantages = [
-  "Farmer and supplier trust and long-term relationships",
+  "Supplier and partner trust, built for the long term",
   "Strong commitment to quality",
   "Efficient operations and technology",
   "Ethical and transparent practices",
@@ -199,7 +197,7 @@ export const advantages = [
 ];
 
 export const impact = [
-  "Improve farmer and supplier income and livelihoods",
+  "Improve incomes and livelihoods across our supply chains",
   "Promote responsible, sustainable sourcing",
   "Create jobs and develop communities",
   "Support national commodities sector development",

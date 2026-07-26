@@ -24,9 +24,7 @@ export const brand = {
 export const nav = [
   { label: "About", href: "#about" },
   { label: "Model", href: "#model" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Impact", href: "#impact" },
-  { label: "Invest", href: "#invest" },
+  { label: "Compliance", href: "#pillars" },
 ] as const;
 
 export const hero = {
@@ -36,7 +34,7 @@ export const hero = {
   subheadline:
     "Ethical sourcing, quality you can trust, and farmer partnerships built to last — the foundation of a Ghanaian cocoa house built to endure. From a license today to a legacy tomorrow.",
   ctaPrimary: { label: "Partner With Us", href: "#contact" },
-  ctaSecondary: { label: "Our 5-Year Vision", href: "#roadmap" },
+  ctaSecondary: { label: "See How It Works", href: "#model" },
 };
 
 export const roadmapIntro = {

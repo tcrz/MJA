@@ -14,12 +14,18 @@ import Pillars, {
 import Contact from "@/components/sections/Contact";
 import * as cocoa from "@/lib/content.cocoa";
 
+const description =
+  "A COCOBOD-licensed cocoa buying company in Ghana, built on ethical sourcing, quality, and farmer partnership — from a license today to a legacy tomorrow.";
+
 export const metadata: Metadata = {
   title: {
     absolute: "MJ Adom Cocoa Trading — We don't just buy cocoa, we build futures",
   },
-  description:
-    "A COCOBOD-licensed cocoa buying company in Ghana, built on ethical sourcing, quality, and farmer partnership — from a license today to a legacy tomorrow.",
+  description,
+  openGraph: {
+    title: "MJ Adom Cocoa Trading",
+    description,
+  },
 };
 
 const heroImage = {
@@ -55,7 +61,7 @@ export default function CocoaPage() {
       />
       <main>
         <Hero hero={cocoa.hero} image={heroImage} />
-        <About about={cocoa.about} vision={cocoa.vision} />
+        <About about={cocoa.about} />
         <Model model={cocoa.model} />
         <Pillars
           pillars={cocoa.pillars}
