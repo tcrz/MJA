@@ -9,7 +9,7 @@ import { services, type ServiceStatus } from "@/lib/content";
 // matching /app/<slug>/page.tsx + content.<slug>.ts — see content.cocoa.ts
 // for the pattern to copy.
 const servicePages: Record<string, string> = {
-  "Agricultural Commodities Trading": "/cocoa",
+  "Agricultural Commodities Trading": "/agric-commodities",
 };
 
 // One representative thumbnail per line of business — echoes the strategy

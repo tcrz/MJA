@@ -17,7 +17,7 @@ export default function Nav({
   nav?: NavContent;
   brand?: BrandContent;
   logoSubtext?: string;
-  /** Set on dedicated service pages (e.g. /cocoa) to link back to the homepage. */
+  /** Set on dedicated service pages (e.g. /agric-commodities) to link back to the homepage. */
   backHref?: string;
   backLabel?: string;
 }) {

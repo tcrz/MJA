@@ -45,7 +45,7 @@ export default function Hero({
   images = defaultImages,
 }: {
   hero?: HeroContent;
-  /** One entry keeps the hero static (e.g. the /cocoa page); 2+ auto-rotates. */
+  /** One entry keeps the hero static (e.g. the /agric-commodities page); 2+ auto-rotates. */
   images?: HeroImage[];
 }) {
   const [index, setIndex] = useState(0);

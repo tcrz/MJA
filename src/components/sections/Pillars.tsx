@@ -38,7 +38,7 @@ export default function Pillars({
   image?: { src: string; alt: string };
   /** "grid": uniform cards, no pillar singled out (homepage default, 8 pillars).
    *  "lead": first pillar gets a large photo card, the rest sit in a list
-   *  (used by /cocoa, where "Farmer-Centered Sourcing" genuinely leads). */
+   *  (used by /agric-commodities, where "Farmer-Centered Sourcing" genuinely leads). */
   variant?: "grid" | "lead";
 }) {
   if (variant === "lead") {
@@ -115,7 +115,7 @@ export default function Pillars({
       <div className="container-x">
         <SectionHeading title={intro.title} intro={intro.intro} />
 
-        {/* All eight carry equal weight here (unlike the /cocoa page's
+        {/* All eight carry equal weight here (unlike the /agric-commodities page's
             single-pillar lead), so it reads as one ledger — a single bordered
             surface ruled into cells — rather than eight separate floating
             icon-chip cards pretending to be distinct objects. */}

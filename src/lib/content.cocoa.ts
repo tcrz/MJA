@@ -1,5 +1,5 @@
 /**
- * Dedicated content bundle for the /cocoa service page.
+ * Dedicated content bundle for the /agric-commodities service page.
  *
  * This preserves the original cocoa-first copy that used to be the whole
  * site. Now that the homepage leads with the broad corporate identity
@@ -14,7 +14,7 @@ export const brand = {
   name: "MJ Adom",
   full: "MJ Adom Cocoa Trading",
   tagline: "Integrity. Quality. Partnership. Prosperity.",
-  slogan: "We don't just buy cocoa, we build futures.",
+  slogan: "Agricultural Commodities Trading, Ghana.",
   location: "Ghana",
   established: 2026,
   email: "hello@mjadom.com",
@@ -28,11 +28,11 @@ export const nav = [
 ] as const;
 
 export const hero = {
-  headlineLine1: "We don't just buy cocoa,",
-  headlineLine2: "we build futures.",
-  emphasis: "build futures",
+  headlineLine1: "Agricultural",
+  headlineLine2: "Commodities Trading",
+  emphasis: "Trading",
   subheadline:
-    "Ethical sourcing, quality you can trust, and farmer partnerships built to last - the foundation of a Ghanaian cocoa house built to endure. From a license today to a legacy tomorrow.",
+    "Ethical sourcing and quality you can trust across cocoa, cashew, maize, and other cash crops - the foundation of a Ghanaian agricultural commodities house built to endure.",
   ctaPrimary: { label: "Partner With Us", href: "#contact" },
   ctaSecondary: { label: "See How It Works", href: "#model" },
 };
@@ -52,9 +52,9 @@ export const pillarsIntro = {
 export const footerNote = "COCOBOD-licensed cocoa buyer, Ghana.";
 
 export const about = {
-  heading: "A Ghanaian cocoa house, built on integrity",
+  heading: "Agricultural Commodities Trading",
   body: [
-    "MJ Adom Cocoa Trading has been granted a One-Year Temporary Licensed Buying Certificate to purchase cocoa in Ghana - the first step of a deliberate, long-term plan.",
+    "MJ Adom Cocoa Trading is a COCOBOD-licensed cocoa buying company in Ghana - the first step of a deliberate, long-term plan. Cocoa is our active focus within this line of business, with cashew, maize, and other cash crops part of our growing scope as we expand.",
     "Our strategy is to build a strong foundation, operate with integrity, empower farmers, ensure quality, and scale sustainably to become a major player in the cocoa value chain within five years.",
   ],
 };

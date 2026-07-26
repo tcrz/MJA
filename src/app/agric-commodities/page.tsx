@@ -15,11 +15,11 @@ import Contact from "@/components/sections/Contact";
 import * as cocoa from "@/lib/content.cocoa";
 
 const description =
-  "A COCOBOD-licensed cocoa buying company in Ghana, built on ethical sourcing, quality, and farmer partnership - from a license today to a legacy tomorrow.";
+  "A COCOBOD-licensed cocoa buying company in Ghana, active in cocoa with cashew, maize, and other cash crops part of our growing scope - built on ethical sourcing, quality, and farmer partnership.";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "MJ Adom Cocoa Trading - We don't just buy cocoa, we build futures",
+    absolute: "MJ Adom Cocoa Trading - Agricultural Commodities Trading",
   },
   description,
   openGraph: {
@@ -42,21 +42,22 @@ const pillarsImage = {
   alt: "A farmer's hand reaching up to harvest a cocoa pod straight from the branch",
 };
 
-// Dedicated page for MJ Adom's active cocoa trading business, linked from the
-// homepage's Services section. This is a service detail page, not a second
-// landing page: it keeps the hero (the one marketing moment worth repeating),
-// then goes straight into what the service is, how it works, and how it's
-// compliant — no roadmap/impact/investment-pitch sections, since those are
-// company-level narrative that already lives on the homepage. Copy this
-// file + content.cocoa.ts's shape for the next service page (e.g. /gold)
-// once that licence is operating.
+// Dedicated page for MJ Adom's Agricultural Commodities Trading service
+// (cocoa active today, cashew/maize/other cash crops as growing scope),
+// linked from the homepage's Services section. This is a service detail
+// page, not a second landing page: it keeps the hero (the one marketing
+// moment worth repeating), then goes straight into what the service is,
+// how it works, and how it's compliant — no roadmap/impact/investment-pitch
+// sections, since those are company-level narrative that already lives on
+// the homepage. Copy this file + content.cocoa.ts's shape for the next
+// service page (e.g. /gold) once that licence is operating.
 export default function CocoaPage() {
   return (
     <>
       <Nav
         nav={cocoa.nav}
         brand={cocoa.brand}
-        logoSubtext="Cocoa Trading"
+        logoSubtext="Agricultural Commodities"
         backHref="/"
       />
       <main>
@@ -76,7 +77,7 @@ export default function CocoaPage() {
         brand={cocoa.brand}
         nav={cocoa.nav}
         footerNote={cocoa.footerNote}
-        logoSubtext="Cocoa Trading"
+        logoSubtext="Agricultural Commodities"
       />
     </>
   );
