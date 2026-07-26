@@ -21,11 +21,11 @@ const SITE_URL = "https://mjadom.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "MJ Adom Commodities & Investments — Trading Commodities. Creating Value.",
+    default: "MJ Adom Commodities & Investments - Trading Commodities. Creating Value.",
     template: "%s · MJ Adom Commodities & Investments",
   },
   description:
-    "A Ghana-based, diversified commodities and investment company — active in cocoa trading, licensed for gold, and building toward a five-year plan across the commodities value chain.",
+    "A Ghana-based, diversified commodities and investment company - active in cocoa trading, licensed for gold, and building toward a five-year plan across the commodities value chain.",
   keywords: [
     "commodities trading Ghana",
     "cocoa trading Ghana",

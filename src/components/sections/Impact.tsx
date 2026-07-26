@@ -32,7 +32,7 @@ export default function Impact({
                 Growth that lifts partners and communities
               </h2>
               <p className="mt-4 max-w-[46ch] text-lg text-muted">
-                Prosperity is written into the plan — for the farmers and
+                Prosperity is written into the plan - for the farmers and
                 suppliers we source from as much as for the business that
                 trades on their behalf.
               </p>

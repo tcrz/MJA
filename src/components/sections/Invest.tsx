@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "../Reveal";
 import { formula as defaultFormula } from "@/lib/content";
 
@@ -26,12 +27,22 @@ export default function Invest({ formula = defaultFormula }: { formula?: Formula
       <div className="container-x relative">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
+            <div className="relative mb-8 aspect-[4/3] w-full max-w-[360px] overflow-hidden rounded-[var(--radius-brand)] border border-gold-light/15">
+              <Image
+                src="https://images.unsplash.com/photo-1768207450151-30c0bf8e8091?auto=format&fit=crop&w=900&q=75"
+                alt="Stacks of coins increasing in height, representing steady financial growth"
+                fill
+                sizes="(min-width: 1024px) 360px, 60vw"
+                unoptimized
+                className="object-cover"
+              />
+            </div>
             <h2 className="text-[clamp(1.8rem,3.8vw,2.7rem)] text-cream">
               A disciplined plan,{" "}
               <span className="gold-text">built to compound</span>
             </h2>
             <p className="mt-4 max-w-[46ch] text-lg text-cream/75">
-              Financially conservative, growth-oriented, and built to compound —
+              Financially conservative, growth-oriented, and built to compound -
               MJ Adom is structured to grow steadily with the partners who back
               it early.
             </p>

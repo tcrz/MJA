@@ -21,7 +21,7 @@ export default function Contact() {
     const interest = String(data.get("interest") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
-    const subject = `MJ Adom enquiry${interest ? ` — ${interest}` : ""}${
+    const subject = `MJ Adom enquiry${interest ? ` - ${interest}` : ""}${
       name ? ` from ${name}` : ""
     }`;
     const detailLines = [
@@ -61,7 +61,7 @@ export default function Contact() {
             <span className="text-accent-ink">excellence</span> together
           </h2>
           <p className="mt-5 max-w-[46ch] text-lg text-muted">
-            Whether you&rsquo;re an investor, a buyer, an exporter, or a farmer —
+            Whether you&rsquo;re an investor, a buyer, an exporter, or a farmer,
             we&rsquo;d love to hear from you. Reach out and let&rsquo;s grow
             together.
           </p>

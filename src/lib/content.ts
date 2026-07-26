@@ -1,8 +1,8 @@
 /**
  * Single source of truth for landing-page copy.
  *
- * Identity is deliberately broad — "commodities and investment company",
- * not "cocoa trader" — so new licences/services slot into `services` below
+ * Identity is deliberately broad - "commodities and investment company",
+ * not "cocoa trader" - so new licences/services slot into `services` below
  * without a redesign. Within `services`, `status` gates how confidently a
  * line of business is presented: only say a service is running if it
  * actually is. Cocoa is active; gold is licensed but not yet operating;
@@ -32,20 +32,20 @@ export const hero = {
   headlineLine2: "Creating Value.",
   emphasis: "Value",
   subheadline:
-    "A Ghana-based, diversified commodities and investment company — currently active in cocoa trading and licensed for gold, with a five-year plan to grow across the full commodities value chain.",
+    "A Ghana-based, diversified commodities and investment company - currently active in cocoa trading and licensed for gold, with a five-year plan to grow across the full commodities value chain.",
   ctaPrimary: { label: "Partner With Us", href: "#contact" },
 };
 
 export const roadmapIntro = {
   heading: "From today's licences to a legacy tomorrow",
   emphasis: "legacy tomorrow",
-  body: "A deliberate path from foundation to market leadership — each year building on the last.",
+  body: "A deliberate path from foundation to market leadership - each year building on the last.",
 };
 
 export const pillarsIntro = {
   title: "The pillars holding up the plan",
   intro:
-    "Every decision maps back to one of these — the structure that turns today's licences into a five-year legacy.",
+    "Every decision maps back to one of these - the structure that turns today's licences into a five-year legacy.",
 };
 
 export const footerNote =
@@ -54,23 +54,23 @@ export const footerNote =
 export const about = {
   heading: "Built on Integrity. Driven by Opportunity.",
   body: [
-    "MJ Adom Commodities & Investments is a Ghana-based company building a diversified commodities and investment business across Africa — connecting farmers and resource holders to global markets, and creating long-term value for our partners and communities.",
+    "MJ Adom Commodities & Investments is a Ghana-based company building a diversified commodities and investment business across Africa - connecting farmers and resource holders to global markets, and creating long-term value for our partners and communities.",
     "We are currently active in agricultural commodities trading: cocoa buying is underway under our Licensed Buying Company certificate, and gold buying is licensed under the Ghana Gold Board and launching soon. These two licences are the foundation of a broader five-year plan to grow into aggregation, logistics, processing, export, and strategic investment.",
   ],
 };
 
 export const vision = {
   vision:
-    "To become one of Africa's most trusted commodities and investment companies — creating sustainable prosperity for farmers, businesses, investors, and communities.",
+    "To become one of Africa's most trusted commodities and investment companies - creating sustainable prosperity for farmers, businesses, investors, and communities.",
   mission:
-    "To source, trade and invest in high-value commodities through integrity, operational excellence, and strategic partnership — building a strong foundation today for a diversified enterprise tomorrow.",
+    "To source, trade and invest in high-value commodities through integrity, operational excellence, and strategic partnership - building a strong foundation today for a diversified enterprise tomorrow.",
 };
 
 export const values = [
   { title: "Integrity", desc: "We do business honestly and transparently, building trust with every partner and community we engage." },
   { title: "Excellence", desc: "We hold ourselves to the highest standards across operations, compliance, and service delivery." },
   { title: "Innovation", desc: "We leverage technology and data to drive smarter decisions across the commodities value chain." },
-  { title: "Partnership", desc: "We grow by growing others — farmers, suppliers, investors, and local communities." },
+  { title: "Partnership", desc: "We grow by growing others - farmers, suppliers, investors, and local communities." },
   { title: "Sustainability", desc: "We are committed to responsible sourcing, environmental stewardship, and long-term value creation." },
   { title: "Prosperity", desc: "Our ultimate measure of success is the shared prosperity we create across Africa." },
 ] as const;
@@ -79,16 +79,16 @@ export type ServiceStatus = "active" | "licensed" | "future";
 
 export const services = [
   {
-    title: "Agricultural Commodities Trading — Cocoa",
+    title: "Agricultural Commodities Trading - Cocoa",
     desc: "Sourcing and buying cocoa from farmers across Ghana under our Licensed Buying Company certificate, with quality and traceability built in from the farm gate.",
     status: "active" as ServiceStatus,
     statusLabel: "Active",
   },
   {
-    title: "Agricultural Commodities Trading — Gold",
+    title: "Agricultural Commodities Trading - Gold",
     desc: "Gold buying licensed under the Ghana Gold Board, with operations launching soon as our second active line of business.",
     status: "licensed" as ServiceStatus,
-    statusLabel: "Licensed — Launching Soon",
+    statusLabel: "Licensed - Launching Soon",
   },
   {
     title: "Commodity Aggregation & Logistics",

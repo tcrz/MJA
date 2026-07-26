@@ -73,7 +73,7 @@ export default function Nav({
       )}
 
       <div className="container-x flex h-[72px] items-center justify-between gap-6">
-        <a href={backHref ?? "#top"} aria-label={backHref ? `${backLabel}` : `${brand.full} — home`}>
+        <a href={backHref ?? "#top"} aria-label={backHref ? `${backLabel}` : `${brand.full} home`}>
           <Logo variant={solid ? "ink" : "light"} subtext={logoSubtext} />
         </a>
 

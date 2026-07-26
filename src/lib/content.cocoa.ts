@@ -6,7 +6,7 @@
  * (see content.ts), this bundle powers the standalone page that the
  * homepage's Services section links to for cocoa specifically. When gold
  * (or any future licence) goes live, copy this file's shape to
- * content.gold.ts and wire up /app/gold/page.tsx the same way — no
+ * content.gold.ts and wire up /app/gold/page.tsx the same way - no
  * redesign of the shared section components needed.
  */
 
@@ -32,7 +32,7 @@ export const hero = {
   headlineLine2: "we build futures.",
   emphasis: "build futures",
   subheadline:
-    "Ethical sourcing, quality you can trust, and farmer partnerships built to last — the foundation of a Ghanaian cocoa house built to endure. From a license today to a legacy tomorrow.",
+    "Ethical sourcing, quality you can trust, and farmer partnerships built to last - the foundation of a Ghanaian cocoa house built to endure. From a license today to a legacy tomorrow.",
   ctaPrimary: { label: "Partner With Us", href: "#contact" },
   ctaSecondary: { label: "See How It Works", href: "#model" },
 };
@@ -40,13 +40,13 @@ export const hero = {
 export const roadmapIntro = {
   heading: "From a license today to a legacy tomorrow",
   emphasis: "legacy tomorrow",
-  body: "A deliberate path from foundation to market leadership — each year building on the last.",
+  body: "A deliberate path from foundation to market leadership - each year building on the last.",
 };
 
 export const pillarsIntro = {
   title: "Five pillars holding up the plan",
   intro:
-    "Every decision maps back to one of these — the structure that turns a one-year license into a five-year legacy.",
+    "Every decision maps back to one of these - the structure that turns a one-year license into a five-year legacy.",
 };
 
 export const footerNote = "COCOBOD-licensed cocoa buyer, Ghana.";
@@ -54,7 +54,7 @@ export const footerNote = "COCOBOD-licensed cocoa buyer, Ghana.";
 export const about = {
   heading: "A Ghanaian cocoa house, built on integrity",
   body: [
-    "MJ Adom Cocoa Trading has been granted a One-Year Temporary Licensed Buying Certificate to purchase cocoa in Ghana — the first step of a deliberate, long-term plan.",
+    "MJ Adom Cocoa Trading has been granted a One-Year Temporary Licensed Buying Certificate to purchase cocoa in Ghana - the first step of a deliberate, long-term plan.",
     "Our strategy is to build a strong foundation, operate with integrity, empower farmers, ensure quality, and scale sustainably to become a major player in the cocoa value chain within five years.",
   ],
 };
@@ -69,7 +69,7 @@ export const vision = {
 export const model = {
   heading: "From farm gate to export market",
   intro:
-    "We buy from farmers, ensure quality, aggregate, store and sell to local processors and export markets — profitably and sustainably.",
+    "We buy from farmers, ensure quality, aggregate, store and sell to local processors and export markets - profitably and sustainably.",
   steps: [
     {
       title: "Farmer Sourcing",
