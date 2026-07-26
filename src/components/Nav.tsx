@@ -11,10 +11,15 @@ export default function Nav({
   nav = defaultNav,
   brand = defaultBrand,
   logoSubtext,
+  backHref,
+  backLabel = "Back to main page",
 }: {
   nav?: NavContent;
   brand?: BrandContent;
   logoSubtext?: string;
+  /** Set on dedicated service pages (e.g. /cocoa) to link back to the homepage. */
+  backHref?: string;
+  backLabel?: string;
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -39,8 +44,36 @@ export default function Nav({
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="container-x flex h-[72px] items-center justify-between">
-        <a href="#top" aria-label={`${brand.full} — home`}>
+      {backHref && (
+        <div
+          className={`border-b transition-colors duration-300 ${
+            solid ? "border-line bg-surface-2/60" : "border-cream/10 bg-black/10"
+          }`}
+        >
+          <div className="container-x flex h-9 items-center">
+            <a
+              href={backHref}
+              className={`inline-flex items-center gap-1.5 text-xs font-medium transition-colors ${
+                solid ? "text-muted hover:text-ink" : "text-cream/70 hover:text-cream"
+              }`}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M19 12H5M11 6l-6 6 6 6"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {backLabel}
+            </a>
+          </div>
+        </div>
+      )}
+
+      <div className="container-x flex h-[72px] items-center justify-between gap-6">
+        <a href={backHref ?? "#top"} aria-label={backHref ? `${backLabel}` : `${brand.full} — home`}>
           <Logo variant={solid ? "ink" : "light"} subtext={logoSubtext} />
         </a>
 
@@ -106,6 +139,24 @@ export default function Nav({
           aria-label="Mobile"
         >
           <div className="container-x flex flex-col gap-1 py-4">
+            {backHref && (
+              <a
+                href={backHref}
+                onClick={() => setOpen(false)}
+                className="mb-1 inline-flex items-center gap-1.5 rounded-lg px-2 py-3 text-base font-medium text-ink hover:bg-surface-2"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M19 12H5M11 6l-6 6 6 6"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {backLabel}
+              </a>
+            )}
             {nav.map((item) => (
               <a
                 key={item.href}

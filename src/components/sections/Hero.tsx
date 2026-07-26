@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Reveal from "../Reveal";
-import { hero as defaultHero, financials as defaultFinancials } from "@/lib/content";
+import { hero as defaultHero } from "@/lib/content";
 
 type HeroContent = typeof defaultHero;
-type FinancialsContent = typeof defaultFinancials;
 
 const defaultImage = {
   src: "https://images.unsplash.com/photo-1568025848823-86404cd04ad1?auto=format&fit=crop&w=2400&q=75",
@@ -12,15 +11,11 @@ const defaultImage = {
 
 export default function Hero({
   hero = defaultHero,
-  financials = defaultFinancials,
   image = defaultImage,
 }: {
   hero?: HeroContent;
-  financials?: FinancialsContent;
   image?: { src: string; alt: string };
 }) {
-  const [primaryStat, ...supportingStats] = financials;
-
   // Highlight the configured substring within line 2 (e.g. "build futures").
   const emphasisIndex = hero.headlineLine2.indexOf(hero.emphasis);
   const before = emphasisIndex >= 0 ? hero.headlineLine2.slice(0, emphasisIndex) : hero.headlineLine2;
@@ -89,41 +84,6 @@ export default function Hero({
               {hero.ctaSecondary.label}
             </a>
           </div>
-        </Reveal>
-
-        <Reveal delay={320}>
-          <dl className="mt-16 flex flex-col gap-8 border-t border-gold-light/15 pt-9 sm:flex-row sm:items-end sm:gap-14">
-            {/* The one claim already true today leads, sized to command
-                the row — not four equal-weight tiles pretending to be
-                equally certain. */}
-            <div>
-              <dt className="sr-only">{primaryStat.label}</dt>
-              <dd>
-                <span className="block font-display text-[clamp(3.4rem,7.5vw,5.2rem)] font-semibold leading-[0.95] text-cream tnum">
-                  {primaryStat.value}
-                </span>
-                <span className="mt-2 block max-w-[24ch] text-sm text-cream/85">
-                  {primaryStat.label}
-                </span>
-              </dd>
-            </div>
-
-            <div className="flex flex-wrap gap-x-9 gap-y-5 sm:pb-1.5">
-              {supportingStats.map((stat) => (
-                <div key={stat.label} className="min-w-[108px]">
-                  <dt className="sr-only">{stat.label}</dt>
-                  <dd>
-                    <span className="block font-display text-xl font-semibold text-cream/85 tnum">
-                      {stat.value}
-                    </span>
-                    <span className="mt-1 block max-w-[16ch] text-xs text-cream/85">
-                      {stat.label}
-                    </span>
-                  </dd>
-                </div>
-              ))}
-            </div>
-          </dl>
         </Reveal>
       </div>
     </section>

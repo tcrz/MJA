@@ -47,9 +47,14 @@ const pillarsImage = {
 export default function CocoaPage() {
   return (
     <>
-      <Nav nav={cocoa.nav} brand={cocoa.brand} logoSubtext="Cocoa Trading" />
+      <Nav
+        nav={cocoa.nav}
+        brand={cocoa.brand}
+        logoSubtext="Cocoa Trading"
+        backHref="/"
+      />
       <main>
-        <Hero hero={cocoa.hero} financials={cocoa.financials} image={heroImage} />
+        <Hero hero={cocoa.hero} image={heroImage} />
         <About about={cocoa.about} vision={cocoa.vision} />
         <Model model={cocoa.model} />
         <Pillars

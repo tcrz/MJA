@@ -17,8 +17,8 @@ export default function Impact({
       <div className="container-x">
         <Reveal className="relative mb-14 aspect-[21/9] w-full overflow-hidden rounded-[var(--radius-brand)] md:mb-16">
           <Image
-            src="https://images.unsplash.com/photo-1747889268735-31192c2a6df4?auto=format&fit=crop&w=1800&q=75"
-            alt="People working together in a community, representing the partners and livelihoods the business grows alongside"
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=75"
+            alt="Two business professionals shaking hands, representing the partnerships the business is built on"
             fill
             sizes="(min-width: 1140px) 1140px, 100vw"
             className="object-cover"
