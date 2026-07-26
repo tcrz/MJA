@@ -24,7 +24,7 @@ const defaultImages: HeroImage[] = [
     alt: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1568025848823-86404cd04ad1?auto=format&fit=crop&w=2400&q=75",
+    src: "https://images.unsplash.com/photo-1759272840712-c7e5ea852367?auto=format&fit=crop&w=2400&q=75",
     alt: "",
   },
 ];
