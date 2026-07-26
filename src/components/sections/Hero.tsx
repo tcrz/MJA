@@ -38,7 +38,7 @@ const defaultImages: HeroImage[] = [
   },
 ];
 
-const SLIDE_DURATION = 6000;
+const SLIDE_DURATION = 4500;
 
 export default function Hero({
   hero = defaultHero,
