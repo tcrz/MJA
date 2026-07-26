@@ -60,7 +60,7 @@ export default function CocoaPage() {
         backHref="/"
       />
       <main>
-        <Hero hero={cocoa.hero} image={heroImage} />
+        <Hero hero={cocoa.hero} images={[heroImage]} />
         <About about={cocoa.about} />
         <Model model={cocoa.model} />
         <Pillars
