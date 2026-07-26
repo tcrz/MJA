@@ -28,10 +28,22 @@ export const metadata: Metadata = {
   },
 };
 
-const heroImage = {
-  src: "https://images.unsplash.com/photo-1663904459101-78345f6b8300?auto=format&fit=crop&w=2400&q=75",
-  alt: "",
-};
+// One slide per cash crop this service covers - cocoa (active) leads, then
+// cashew and maize standing in for the growing scope named in the page copy.
+const heroImages = [
+  {
+    src: "https://images.unsplash.com/photo-1663904459101-78345f6b8300?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1619371221580-37010721fff3?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1601665646242-8f38ff4c74f7?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+];
 
 // agric.pillars leads with "Farmer-Centered Sourcing" (unlike the homepage's
 // "Licensing & Compliance" lead), so both the icon order and lead photo are
@@ -61,7 +73,7 @@ export default function AgricCommoditiesPage() {
         backHref="/"
       />
       <main>
-        <Hero hero={agric.hero} images={[heroImage]} />
+        <Hero hero={agric.hero} images={heroImages} />
         <About about={agric.about} />
         <Model model={agric.model} />
         <Pillars
