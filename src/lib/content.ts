@@ -5,8 +5,10 @@
  * not "cocoa trader" - so new licences/services slot into `services` below
  * without a redesign. Within `services`, `status` gates how confidently a
  * line of business is presented: only say a service is running if it
- * actually is. Cocoa is active; gold is licensed but not yet operating;
- * everything past that is roadmap/future direction, not a current offer.
+ * actually is. Within agricultural commodities, cocoa is the active crop
+ * today - cashew, maize, and other cash crops are named as scope, not
+ * claimed as active. Gold is licensed but not yet operating; everything
+ * past that is roadmap/future direction, not a current offer.
  */
 
 export const brand = {
@@ -79,13 +81,13 @@ export type ServiceStatus = "active" | "licensed" | "future";
 
 export const services = [
   {
-    title: "Agricultural Commodities Trading - Cocoa",
-    desc: "Sourcing and buying cocoa from farmers across Ghana under our Licensed Buying Company certificate, with quality and traceability built in from the farm gate.",
+    title: "Agricultural Commodities Trading",
+    desc: "Sourcing and buying agricultural commodities across Ghana - cocoa buying is active today under our Licensed Buying Company certificate, with cashew, maize, and other cash crops part of our growing scope in this line of business.",
     status: "active" as ServiceStatus,
     statusLabel: "Active",
   },
   {
-    title: "Agricultural Commodities Trading - Gold",
+    title: "Precious Minerals Trading - Gold",
     desc: "Gold buying licensed under the Ghana Gold Board, with operations launching soon as our second active line of business.",
     status: "licensed" as ServiceStatus,
     statusLabel: "Licensed - Launching Soon",

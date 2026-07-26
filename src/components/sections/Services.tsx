@@ -3,23 +3,24 @@ import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
 import { services, type ServiceStatus } from "@/lib/content";
 
-// Cocoa is the only service with a live dedicated page today. As gold (and
-// later services) come online, add their slug here and drop in a matching
-// /app/<slug>/page.tsx + content.<slug>.ts — see content.cocoa.ts for the
-// pattern to copy.
+// Cocoa is the only service with a live dedicated page today (it's the one
+// active crop within the broader Agricultural Commodities Trading line). As
+// gold (and later services) come online, add their slug here and drop in a
+// matching /app/<slug>/page.tsx + content.<slug>.ts — see content.cocoa.ts
+// for the pattern to copy.
 const servicePages: Record<string, string> = {
-  "Agricultural Commodities Trading - Cocoa": "/cocoa",
+  "Agricultural Commodities Trading": "/cocoa",
 };
 
 // One representative thumbnail per line of business — echoes the strategy
 // deck's "commodity portfolio" grid, scoped to the site's own 6 services
 // rather than the deck's full raw-commodity list.
 const serviceImages: Record<string, { src: string; alt: string }> = {
-  "Agricultural Commodities Trading - Cocoa": {
+  "Agricultural Commodities Trading": {
     src: "https://images.unsplash.com/photo-1722699350336-b22f6a263499?auto=format&fit=crop&w=600&q=75",
     alt: "A farmer's hand harvesting a cocoa pod",
   },
-  "Agricultural Commodities Trading - Gold": {
+  "Precious Minerals Trading - Gold": {
     src: "https://images.unsplash.com/photo-1718752773274-4baba3906300?auto=format&fit=crop&w=600&q=75",
     alt: "Stacked gold bullion bars",
   },
