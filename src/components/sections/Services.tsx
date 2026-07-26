@@ -6,8 +6,8 @@ import { services, type ServiceStatus } from "@/lib/content";
 // Cocoa is the only service with a live dedicated page today (it's the one
 // active crop within the broader Agricultural Commodities Trading line). As
 // gold (and later services) come online, add their slug here and drop in a
-// matching /app/<slug>/page.tsx + content.<slug>.ts — see content.cocoa.ts
-// for the pattern to copy.
+// matching /app/<slug>/page.tsx + content.<slug>.ts — see
+// content.agric-commodities.ts for the pattern to copy.
 const servicePages: Record<string, string> = {
   "Agricultural Commodities Trading": "/agric-commodities",
 };

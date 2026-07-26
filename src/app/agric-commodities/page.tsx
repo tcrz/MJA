@@ -12,7 +12,7 @@ import Pillars, {
   GrowthIcon,
 } from "@/components/sections/Pillars";
 import Contact from "@/components/sections/Contact";
-import * as cocoa from "@/lib/content.cocoa";
+import * as agric from "@/lib/content.agric-commodities";
 
 const description =
   "A COCOBOD-licensed cocoa buying company in Ghana, active in cocoa with cashew, maize, and other cash crops part of our growing scope - built on ethical sourcing, quality, and farmer partnership.";
@@ -33,7 +33,7 @@ const heroImage = {
   alt: "",
 };
 
-// cocoa.pillars leads with "Farmer-Centered Sourcing" (unlike the homepage's
+// agric.pillars leads with "Farmer-Centered Sourcing" (unlike the homepage's
 // "Licensing & Compliance" lead), so both the icon order and lead photo are
 // overridden to match.
 const pillarsIcons = [SeedIcon, BadgeIcon, GearIcon, PeopleIcon, GrowthIcon];
@@ -49,24 +49,24 @@ const pillarsImage = {
 // moment worth repeating), then goes straight into what the service is,
 // how it works, and how it's compliant — no roadmap/impact/investment-pitch
 // sections, since those are company-level narrative that already lives on
-// the homepage. Copy this file + content.cocoa.ts's shape for the next
-// service page (e.g. /gold) once that licence is operating.
-export default function CocoaPage() {
+// the homepage. Copy this file + content.agric-commodities.ts's shape for
+// the next service page (e.g. /gold) once that licence is operating.
+export default function AgricCommoditiesPage() {
   return (
     <>
       <Nav
-        nav={cocoa.nav}
-        brand={cocoa.brand}
+        nav={agric.nav}
+        brand={agric.brand}
         logoSubtext="Agricultural Commodities"
         backHref="/"
       />
       <main>
-        <Hero hero={cocoa.hero} images={[heroImage]} />
-        <About about={cocoa.about} />
-        <Model model={cocoa.model} />
+        <Hero hero={agric.hero} images={[heroImage]} />
+        <About about={agric.about} />
+        <Model model={agric.model} />
         <Pillars
-          pillars={cocoa.pillars}
-          intro={cocoa.pillarsIntro}
+          pillars={agric.pillars}
+          intro={agric.pillarsIntro}
           icons={pillarsIcons}
           image={pillarsImage}
           variant="lead"
@@ -74,9 +74,9 @@ export default function CocoaPage() {
         <Contact />
       </main>
       <Footer
-        brand={cocoa.brand}
-        nav={cocoa.nav}
-        footerNote={cocoa.footerNote}
+        brand={agric.brand}
+        nav={agric.nav}
+        footerNote={agric.footerNote}
         logoSubtext="Agricultural Commodities"
       />
     </>

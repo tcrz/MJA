@@ -1,6 +1,6 @@
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
-import { model as defaultModel } from "@/lib/content.cocoa";
+import { model as defaultModel } from "@/lib/content.agric-commodities";
 
 type ModelContent = typeof defaultModel;
 
