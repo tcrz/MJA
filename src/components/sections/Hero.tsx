@@ -5,12 +5,19 @@ import { hero as defaultHero, financials as defaultFinancials } from "@/lib/cont
 type HeroContent = typeof defaultHero;
 type FinancialsContent = typeof defaultFinancials;
 
+const defaultImage = {
+  src: "https://images.unsplash.com/photo-1568025848823-86404cd04ad1?auto=format&fit=crop&w=2400&q=75",
+  alt: "",
+};
+
 export default function Hero({
   hero = defaultHero,
   financials = defaultFinancials,
+  image = defaultImage,
 }: {
   hero?: HeroContent;
   financials?: FinancialsContent;
+  image?: { src: string; alt: string };
 }) {
   const [primaryStat, ...supportingStats] = financials;
 
@@ -28,8 +35,8 @@ export default function Hero({
       className="relative overflow-hidden bg-forest-deep text-cream"
     >
       <Image
-        src="https://images.unsplash.com/photo-1663904459101-78345f6b8300?auto=format&fit=crop&w=2400&q=75"
-        alt=""
+        src={image.src}
+        alt={image.alt}
         fill
         priority
         sizes="100vw"

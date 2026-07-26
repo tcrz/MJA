@@ -45,7 +45,7 @@ export const roadmapIntro = {
 };
 
 export const pillarsIntro = {
-  title: "Five pillars holding up the plan",
+  title: "The pillars holding up the plan",
   intro:
     "Every decision maps back to one of these — the structure that turns today's licences into a five-year legacy.",
 };
@@ -171,10 +171,6 @@ export const roadmap = [
 ] as const;
 
 export const pillars = [
-  {
-    title: "Farmer & Supplier-Centered Sourcing",
-    desc: "Build trust, support and long-term relationships at the root of the chain.",
-  },
   {
     title: "Licensing & Compliance",
     desc: "Full compliance with COCOBOD and Ghana Gold Board requirements, every season.",

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import Image from "next/image";
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
@@ -5,15 +6,26 @@ import { pillars as defaultPillars, pillarsIntro as defaultIntro } from "@/lib/c
 
 type PillarsContent = typeof defaultPillars;
 type PillarsIntro = typeof defaultIntro;
+type IconComponent = () => JSX.Element;
 
-const icons = [SeedIcon, BadgeIcon, GearIcon, PeopleIcon, GrowthIcon];
+const defaultIcons = [BadgeIcon, GearIcon, PeopleIcon, GrowthIcon];
+
+const defaultImage = {
+  src: "https://images.unsplash.com/photo-1763729805496-b5dbf7f00c79?auto=format&fit=crop&w=1200&q=75",
+  alt: "A hand signing a business document, representing licensing and regulatory compliance",
+};
 
 export default function Pillars({
   pillars = defaultPillars,
   intro = defaultIntro,
+  icons = defaultIcons,
+  image = defaultImage,
 }: {
   pillars?: PillarsContent;
   intro?: PillarsIntro;
+  /** One icon per pillar, in the same order as `pillars`. */
+  icons?: IconComponent[];
+  image?: { src: string; alt: string };
 }) {
   const [lead, ...rest] = pillars;
   const LeadIcon = icons[0];
@@ -31,8 +43,8 @@ export default function Pillars({
             <div className="flex h-full flex-col overflow-hidden rounded-[var(--radius-brand)] border border-line bg-surface shadow-[var(--shadow-md)]">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1722699350336-b22f6a263499?auto=format&fit=crop&w=1200&q=75"
-                  alt="A farmer's hand reaching up to harvest a cocoa pod straight from the branch"
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   // Bypasses Next's image optimizer, which 500s unpredictably
@@ -83,7 +95,7 @@ export default function Pillars({
   );
 }
 
-function SeedIcon() {
+export function SeedIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M12 21c4-3 7-6 7-10a7 7 0 10-14 0c0 4 3 7 7 10z" stroke="currentColor" strokeWidth="1.6" />
@@ -91,7 +103,7 @@ function SeedIcon() {
     </svg>
   );
 }
-function BadgeIcon() {
+export function BadgeIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="10" r="6" stroke="currentColor" strokeWidth="1.6" />
@@ -99,7 +111,7 @@ function BadgeIcon() {
     </svg>
   );
 }
-function GearIcon() {
+export function GearIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.6" />
@@ -107,7 +119,7 @@ function GearIcon() {
     </svg>
   );
 }
-function PeopleIcon() {
+export function PeopleIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <circle cx="9" cy="9" r="2.6" stroke="currentColor" strokeWidth="1.6" />
@@ -116,7 +128,7 @@ function PeopleIcon() {
     </svg>
   );
 }
-function GrowthIcon() {
+export function GrowthIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M4 19h16M6 19v-5M11 19V9M16 19v-8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />

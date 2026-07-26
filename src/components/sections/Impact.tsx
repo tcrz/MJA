@@ -17,8 +17,8 @@ export default function Impact({
       <div className="container-x">
         <Reveal className="relative mb-14 aspect-[21/9] w-full overflow-hidden rounded-[var(--radius-brand)] md:mb-16">
           <Image
-            src="https://images.unsplash.com/photo-1507576164121-220762647800?auto=format&fit=crop&w=1800&q=75"
-            alt="Cupped hands holding freshly harvested cocoa beans over a woven drying mat"
+            src="https://images.unsplash.com/photo-1747889268735-31192c2a6df4?auto=format&fit=crop&w=1800&q=75"
+            alt="People working together in a community, representing the partners and livelihoods the business grows alongside"
             fill
             sizes="(min-width: 1140px) 1140px, 100vw"
             className="object-cover"
@@ -29,11 +29,12 @@ export default function Impact({
           <div>
             <Reveal>
               <h2 className="max-w-[16ch] text-[clamp(1.7rem,3.4vw,2.4rem)] text-ink">
-                Growth that lifts farmers and communities
+                Growth that lifts partners and communities
               </h2>
               <p className="mt-4 max-w-[46ch] text-lg text-muted">
-                Prosperity is written into the plan — for the people who grow the
-                cocoa as much as for the business that trades it.
+                Prosperity is written into the plan — for the farmers and
+                suppliers we source from as much as for the business that
+                trades on their behalf.
               </p>
             </Reveal>
             <ul className="mt-8 space-y-3">
