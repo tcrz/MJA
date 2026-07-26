@@ -49,17 +49,15 @@ export default function Invest({ formula = defaultFormula }: { formula?: Formula
           </Reveal>
 
           <Reveal delay={100}>
-            <ul className="grid gap-3 sm:grid-cols-2">
+            <ul className="grid grid-cols-1 overflow-hidden rounded-[var(--radius-brand)] border-t border-l border-gold-light/15 sm:grid-cols-2">
               {objectives.map((obj) => (
                 <li
                   key={obj}
-                  className="flex items-start gap-3 rounded-xl border border-gold-light/15 bg-white/[0.04] px-4 py-3.5"
+                  className="flex items-center gap-3 border-b border-r border-gold-light/15 bg-white/[0.03] px-5 py-4"
                 >
-                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-gold-light/20 text-gold-light">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                      <path d="M5 12l4.5 4.5L19 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-none text-gold-light">
+                    <path d="M5 12l4.5 4.5L19 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                   <span className="text-[0.95rem] leading-snug text-cream/90">
                     {obj}
                   </span>

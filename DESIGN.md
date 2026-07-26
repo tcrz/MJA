@@ -19,28 +19,28 @@ colors:
   accent-ink: "#7a5a12"
 typography:
   display:
-    fontFamily: "var(--font-fraunces), Iowan Old Style, Palatino, Georgia, serif"
+    fontFamily: "var(--font-playfair), Iowan Old Style, Palatino, Georgia, serif"
     fontSize: "clamp(2.6rem, 7vw, 5.3rem)"
     fontWeight: 600
     lineHeight: 1.05
     letterSpacing: "-0.02em"
   headline:
-    fontFamily: "var(--font-fraunces), Iowan Old Style, Palatino, Georgia, serif"
+    fontFamily: "var(--font-playfair), Iowan Old Style, Palatino, Georgia, serif"
     fontSize: "clamp(1.7rem, 3.6vw, 2.6rem)"
     fontWeight: 600
     lineHeight: 1.05
   title:
-    fontFamily: "var(--font-fraunces), Iowan Old Style, Palatino, Georgia, serif"
+    fontFamily: "var(--font-playfair), Iowan Old Style, Palatino, Georgia, serif"
     fontSize: "clamp(1.5rem, 2.6vw, 1.9rem)"
     fontWeight: 600
     lineHeight: 1.15
   body:
-    fontFamily: "var(--font-hanken), system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "var(--font-inter), system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
   label:
-    fontFamily: "var(--font-hanken), system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "var(--font-inter), system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "0.72rem"
     fontWeight: 700
     letterSpacing: "0.28em"
@@ -92,7 +92,7 @@ This directly rejects the two failure modes the brand explicitly guards against 
 
 **Key Characteristics:**
 - Forest green dominates as the institutional ground; gold is rationed to credentials, CTAs, and single emphasized words — never a wash of color.
-- Display type is a warm serif (Fraunces), body type a clean grotesque sans (Hanken) — the pairing itself does the "warm but credible" work rather than any single color.
+- Display type is an elegant high-contrast serif (Playfair Display), body type a clean geometric-humanist sans (Inter) — the pairing itself does the "warm but credible" work rather than any single color.
 - Flat-to-ambient elevation: shadows lift, they never dramatize.
 - Status is always explicit and visually distinct (active vs. licensed-launching-soon vs. future direction) — the system never lets a future service look like it's already operating.
 
@@ -127,8 +127,8 @@ The palette reads as a working ledger, not a brand mood board: a deep, near-blac
 
 ## 3. Typography
 
-**Display Font:** Fraunces (with Iowan Old Style, Palatino, Georgia, serif fallback)
-**Body Font:** Hanken Grotesk (with system-ui, -apple-system, Segoe UI fallback)
+**Display Font:** Playfair Display (with Iowan Old Style, Palatino, Georgia, serif fallback)
+**Body Font:** Inter (with system-ui, -apple-system, Segoe UI fallback)
 
 **Character:** A warm, slightly old-style serif for anything that needs to carry authority or emotion (headlines, section titles, key figures), paired with a clean, unadorned grotesque for everything read at length — the serif supplies warmth and gravity, the sans supplies clarity and speed.
 
@@ -140,7 +140,7 @@ The palette reads as a working ledger, not a brand mood board: a deep, near-blac
 - **Label** (700, `0.72rem`, 0.28em tracking, uppercase): The `.kicker` eyebrow class and status badges — the only place heavy tracking and uppercase are permitted.
 
 ### Named Rules
-**The Serif-Carries-Weight Rule.** Any element the brand needs to be taken seriously by (headlines, financial figures, license framing) sets in Fraunces. Anything read for information density sets in Hanken. Never swap the two.
+**The Serif-Carries-Weight Rule.** Any element the brand needs to be taken seriously by (headlines, financial figures, license framing) sets in Playfair Display. Anything read for information density sets in Inter. Never swap the two.
 
 ## 4. Elevation
 
@@ -188,7 +188,7 @@ Small (40–48px) rounded-square (10px radius) chips in `bg-forest/10 text-fores
 ### Do:
 - **Do** reserve gold for things that are true today — an active CTA, a real number, an `active`/`licensed` status badge (The Earned-Gold Rule).
 - **Do** keep the 14px card radius and 10px button radius as the only two radius values in the system.
-- **Do** pair Fraunces (display/headline/title) with Hanken (body/label) — never introduce a third typeface.
+- **Do** pair Playfair Display (display/headline/title) with Inter (body/label) — never introduce a third typeface.
 - **Do** keep shadows soft and ambient (≤40px blur, no hard offset) — depth comes from background-color steps between sections, not deepening shadows.
 - **Do** give every status-gated service (cocoa, gold, future lines) an explicit, visually distinct badge — never let a `future` item look active.
 

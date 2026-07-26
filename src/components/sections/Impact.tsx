@@ -37,15 +37,13 @@ export default function Impact({
                 trades on their behalf.
               </p>
             </Reveal>
-            <ul className="mt-8 space-y-3">
+            <ul className="mt-8 divide-y divide-line overflow-hidden rounded-[var(--radius-brand)] border border-line bg-surface">
               {impact.map((goal, i) => (
                 <Reveal as="li" key={goal} delay={i * 60}>
-                  <div className="flex items-start gap-3 rounded-xl border border-line bg-surface px-4 py-3.5 shadow-[var(--shadow-sm)]">
-                    <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-gold/15 text-accent-ink">
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12l4.5 4.5L19 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
+                  <div className="flex items-center gap-3.5 px-5 py-4">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-none text-accent-ink">
+                      <path d="M5 12l4.5 4.5L19 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                     <span className="text-[0.98rem] text-ink">{goal}</span>
                   </div>
                 </Reveal>
@@ -60,14 +58,14 @@ export default function Impact({
                 What we&rsquo;re building on
               </h2>
             </Reveal>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 overflow-hidden rounded-[var(--radius-brand)] border-t border-l border-line bg-surface sm:grid-cols-2">
               {advantages.map((adv, i) => (
                 <Reveal key={adv} delay={i * 70}>
-                  <div className="flex h-full items-center gap-3 rounded-xl bg-forest/[0.06] px-4 py-4">
-                    <span className="font-display text-lg font-bold text-forest tnum">
+                  <div className="flex h-full items-center gap-3 border-b border-r border-line px-5 py-4">
+                    <span className="font-display text-base font-bold text-forest tnum">
                       0{i + 1}
                     </span>
-                    <span className="text-[0.95rem] font-medium leading-snug text-ink">
+                    <span className="text-[0.9rem] font-medium leading-snug text-ink">
                       {adv}
                     </span>
                   </div>

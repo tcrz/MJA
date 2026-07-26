@@ -31,23 +31,23 @@ export default function About({
           </div>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 overflow-hidden rounded-[var(--radius-brand)] border-t border-l border-gold-light/15 md:grid-cols-2">
           <Reveal delay={80}>
-            <article className="h-full rounded-[var(--radius-brand)] border border-gold-light/15 bg-white/[0.03] p-8 md:p-10">
-              <h3 className="font-display text-base font-semibold text-gold-light">
+            <article className="h-full border-b border-r border-gold-light/15 bg-white/[0.03] p-8 md:p-10">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
                 Our Vision
               </h3>
-              <p className="mt-4 font-display text-[clamp(1.4rem,2.6vw,2rem)] leading-snug text-cream">
+              <p className="mt-4 font-display text-xl italic leading-snug text-cream md:text-2xl">
                 {vision.vision}
               </p>
             </article>
           </Reveal>
           <Reveal delay={160}>
-            <article className="h-full rounded-[var(--radius-brand)] border border-gold-light/15 bg-white/[0.03] p-8 md:p-10">
-              <h3 className="font-display text-base font-semibold text-gold-light">
+            <article className="h-full border-b border-r border-gold-light/15 bg-white/[0.03] p-8 md:p-10">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
                 Our Mission
               </h3>
-              <p className="mt-4 font-display text-[clamp(1.4rem,2.6vw,2rem)] leading-snug text-cream">
+              <p className="mt-4 font-display text-xl italic leading-snug text-cream md:text-2xl">
                 {vision.mission}
               </p>
             </article>

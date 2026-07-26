@@ -125,12 +125,10 @@ export default function Pillars({
             return (
               <Reveal key={pillar.title} delay={i * 70}>
                 <div className="h-full border-b border-r border-line p-6 md:p-7">
-                  <div className="flex items-center gap-2.5">
-                    <Icon className="h-5 w-5 flex-none text-forest" />
-                    <h3 className="font-display text-base font-semibold leading-tight text-ink">
-                      {pillar.title}
-                    </h3>
-                  </div>
+                  <Icon className="h-6 w-6 flex-none text-forest" />
+                  <h3 className="mt-3.5 font-display text-base font-semibold leading-tight text-ink">
+                    {pillar.title}
+                  </h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted">
                     {pillar.desc}
                   </p>

@@ -16,8 +16,8 @@
   --color-cocoa: #5a3a22;
   --color-cream: #faf5ea;
 
-  --font-display: var(--font-fraunces), "Iowan Old Style", Palatino, Georgia, serif;
-  --font-sans: var(--font-hanken), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-playfair), "Iowan Old Style", Palatino, Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --radius-brand: 14px;
 }
