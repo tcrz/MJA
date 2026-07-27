@@ -15,7 +15,7 @@ import Contact from "@/components/sections/Contact";
 import * as agric from "@/lib/content.agric-commodities";
 
 const description =
-  "A COCOBOD-licensed cocoa buying company in Ghana, active in cocoa with cashew, maize, and other cash crops part of our growing scope - built on ethical sourcing, quality, and farmer partnership.";
+  "A COCOBOD-licensed cocoa buying company in Ghana, active in cocoa with cashew, maize, soybean, coffee, and other cash crops part of our growing scope - built on ethical sourcing, quality, and farmer partnership.";
 
 export const metadata: Metadata = {
   title: {
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
 };
 
 // One slide per cash crop this service covers - cocoa (active) leads, then
-// cashew and maize standing in for the growing scope named in the page copy.
+// cashew, maize, soybean, and coffee standing in for the growing scope named
+// in the page copy.
 const heroImages = [
   {
     src: "https://images.unsplash.com/photo-1663904459101-78345f6b8300?auto=format&fit=crop&w=2400&q=75",
@@ -41,6 +42,14 @@ const heroImages = [
   },
   {
     src: "https://images.unsplash.com/photo-1601665646242-8f38ff4c74f7?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600747476236-76579658b1b1?auto=format&fit=crop&w=2400&q=75",
+    alt: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=2400&q=75",
     alt: "",
   },
 ];

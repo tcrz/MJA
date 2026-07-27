@@ -82,7 +82,7 @@ export type ServiceStatus = "active" | "licensed" | "future";
 export const services = [
   {
     title: "Agricultural Commodities Trading",
-    desc: "Sourcing and buying agricultural commodities across Ghana - cocoa buying is active today under our Licensed Buying Company certificate, with cashew, maize, and other cash crops part of our growing scope in this line of business.",
+    desc: "Sourcing and buying agricultural commodities across Ghana - cocoa buying is active today under our Licensed Buying Company certificate, with cashew, maize, soybean, coffee, and other cash crops part of our growing scope in this line of business.",
     status: "active" as ServiceStatus,
     statusLabel: "Active",
   },
